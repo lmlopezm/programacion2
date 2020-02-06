@@ -7,6 +7,7 @@ public class Concomision extends Persona {
 	private int MontoPorclientes;
 			
 //Constructor de la clase conComision
+	// mensaje de prueba by sergio
 public Concomision(String cedula, String nombre, String apellidos, int anioIngreso, String genero, String telefono,
 			String correo, String direccion, int ndeclientescap, int montoPorclientes) {
 		
