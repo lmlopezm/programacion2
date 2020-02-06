@@ -9,7 +9,9 @@ public class Concomision extends Persona {
 
 public Concomision(String cedula, String nombre, String apellidos, int anioIngreso, String genero, String telefono,
 			String correo, String direccion, int ndeclientescap, int montoPorclientes) {
-		super(cedula, nombre, apellidos, anioIngreso, genero, telefono, correo, direccion);
+		
+	
+	super(cedula, nombre, apellidos, anioIngreso, genero, telefono, correo, direccion);
 		Ndeclientescap = ndeclientescap;
 		MontoPorclientes = montoPorclientes;
 	}
