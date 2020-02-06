@@ -6,7 +6,7 @@ public class Concomision extends Persona {
 	private int Ndeclientescap;	
 	private int MontoPorclientes;
 			
-
+//Constructor de la clase conComision
 public Concomision(String cedula, String nombre, String apellidos, int anioIngreso, String genero, String telefono,
 			String correo, String direccion, int ndeclientescap, int montoPorclientes) {
 		
