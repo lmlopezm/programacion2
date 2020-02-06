@@ -8,6 +8,7 @@ public class Concomision extends Persona {
 			
 //Constructor de la clase conComision
 	// mensaje de prueba by sergio
+	//mensaje de santi prueba 1.3
 public Concomision(String cedula, String nombre, String apellidos, int anioIngreso, String genero, String telefono,
 			String correo, String direccion, int ndeclientescap, int montoPorclientes) {
 		
