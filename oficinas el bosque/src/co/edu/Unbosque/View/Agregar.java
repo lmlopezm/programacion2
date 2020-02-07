@@ -17,12 +17,12 @@ public class Agregar extends JFrame {
 	private JLabel lblLogoPersona;
 	private JTextField txtNombre;
 	private JTextField txtApellido;
-	private JTextField txtEdad;
-	private JTextField txtCodigo;
-	private JTextField txtCarrera;
+	private JTextField txtanioIngreso;
+	private JTextField txtCedula;
+	private JTextField txtgenero;
 	private JLabel lblApellido;
-	private JLabel lblCodigo;
-	private JLabel lblCarrera;
+	private JLabel lblCedula;
+	private JLabel lblgenero;
 	private JLabel lblCiudad;
 	private JTextField txtCiudad;
 	private JComboBox boxFacultad;
@@ -31,7 +31,7 @@ public class Agregar extends JFrame {
 	private JButton btnModificar;
 	private JButton btnAtras;
 	private JLabel lblNombre;
-	private JLabel lblEdad;
+	private JLabel lblanioIngreso;
 	private JLabel lblMakoa;
 
 	public Agregar() {
@@ -97,50 +97,50 @@ public class Agregar extends JFrame {
 		/**
 		 * Etiqueta de la edad
 		 */
-		lblEdad = new JLabel("Edad:");
-		lblEdad.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
-		lblEdad.setBounds(37, 225, 68, 23);
-		panelContenedor.add(lblEdad);
+		lblanioIngreso = new JLabel("anioIgreso:");
+		lblanioIngreso.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblanioIngreso.setBounds(37, 225, 68, 23);
+		panelContenedor.add(lblanioIngreso);
 
 		/**
 		 * Txt donde se encuentra la edad del sujeto
 		 */
-		txtEdad = new JTextField();
-		txtEdad.setColumns(10);
-		txtEdad.setBounds(131, 228, 121, 20);
-		panelContenedor.add(txtEdad);
+		txtanioIngreso = new JTextField();
+		txtanioIngreso.setColumns(10);
+		txtanioIngreso.setBounds(131, 228, 121, 20);
+		panelContenedor.add(txtanioIngreso);
 
 		/**
 		 * Etiqueta del codigo o identificación
 		 */
-		lblCodigo = new JLabel("Codigo:");
-		lblCodigo.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
-		lblCodigo.setBounds(37, 259, 68, 23);
-		panelContenedor.add(lblCodigo);
+		lblCedula = new JLabel("Cedula:");
+		lblCedula.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblCedula.setBounds(37, 259, 68, 23);
+		panelContenedor.add(lblCedula);
 
 		/**
 		 * Txt donde se encuentra el codigo o identificació del sujeto
 		 */
-		txtCodigo = new JTextField();
-		txtCodigo.setColumns(10);
-		txtCodigo.setBounds(131, 262, 121, 20);
-		panelContenedor.add(txtCodigo);
+		txtCedula = new JTextField();
+		txtCedula.setColumns(10);
+		txtCedula.setBounds(131, 262, 121, 20);
+		panelContenedor.add(txtCedula);
 
 		/**
 		 * Etiqueta del la carrera
 		 */
-		lblCarrera = new JLabel("Carrera:");
-		lblCarrera.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
-		lblCarrera.setBounds(37, 293, 68, 23);
-		panelContenedor.add(lblCarrera);
+		lblgenero = new JLabel("Genero:");
+		lblgenero.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblgenero.setBounds(37, 293, 68, 23);
+		panelContenedor.add(lblgenero);
 
 		/**
 		 * Txt donde se encuentra la carrera cursa por el sujeto
 		 */
-		txtCarrera = new JTextField();
-		txtCarrera.setColumns(10);
-		txtCarrera.setBounds(131, 296, 121, 20);
-		panelContenedor.add(txtCarrera);
+		txtgenero = new JTextField();
+		txtgenero.setColumns(10);
+		txtgenero.setBounds(131, 296, 121, 20);
+		panelContenedor.add(txtgenero);
 
 		/**
 		 * Etiqueta de la ciudad
