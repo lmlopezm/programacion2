@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
-public class Agregar extends JFrame {
+public class Modificar_Comision extends JFrame {
 	private JPanel panelContenedor;
 	private JLabel lblLogoPersona;
 	private JTextField txtNombre;
@@ -25,7 +25,6 @@ public class Agregar extends JFrame {
 	private JLabel lblDireccion;
 	private JTextField txttelefono;
 	private JLabel lblAñoIngreso;
-	private JButton btnAgregar;
 	private JButton btnModificar;
 	private JButton btnAtras;
 	private JLabel lblNombre;
@@ -36,13 +35,17 @@ public class Agregar extends JFrame {
 	private JLabel lblTrabajador;
 	private JComboBox TipoingCombo;
 	private JLabel lblNivel;
-	private JComboBox nivelCombo;
+	private JLabel lblSueldo;
+	private JLabel lblValorSueldo;
+	private JTextField txtClientesCap;
+	private JLabel lblComisin;
+	private JTextField textField;
 
-	public Agregar() {
+	public Modificar_Comision() {
 		/**
 		 * Caracteristicas de la ventana
 		 */
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Agregar.class.getResource("/images/logo bosque png.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Modificar_Comision.class.getResource("/images/logo bosque png.png")));
 		setTitle("Oficinas el bosque");
 		setSize(450, 473);
 		setResizable(false);
@@ -62,7 +65,7 @@ public class Agregar extends JFrame {
 		 * intuitiva la interaccion
 		 */
 		lblLogoPersona = new JLabel("");
-		lblLogoPersona.setIcon(new ImageIcon(Agregar.class.getResource("/images/Icon image 3.png")));
+		lblLogoPersona.setIcon(new ImageIcon(Modificar_Comision.class.getResource("/images/Icon image 3.png")));
 		lblLogoPersona.setBounds(171, 32, 81, 88);
 		panelContenedor.add(lblLogoPersona);
 
@@ -163,23 +166,13 @@ public class Agregar extends JFrame {
 		panelContenedor.add(lblAñoIngreso);
 
 		/**
-		 * Boton que agrega al la lista un estudiante con los datos ingresados en los
-		 * campos
-		 */
-		btnAgregar = new JButton("Agregar");
-		btnAgregar.setFont(new Font("Monospaced", Font.BOLD, 12));
-		btnAgregar.setActionCommand("AGREGAR");
-		btnAgregar.setBounds(292, 224, 106, 23);
-		panelContenedor.add(btnAgregar);
-
-		/**
 		 * Boton que modifica los datos del estudiante encontrado despues de haber sido
 		 * buscado mediante su codigo en la ventana principal
 		 */
 		btnModificar = new JButton("Modificar");
 		btnModificar.setFont(new Font("Monospaced", Font.BOLD, 12));
 		btnModificar.setActionCommand("MODIFICAR");
-		btnModificar.setBounds(292, 259, 106, 23);
+		btnModificar.setBounds(292, 350, 106, 23);
 		panelContenedor.add(btnModificar);
 
 		/**
@@ -188,7 +181,7 @@ public class Agregar extends JFrame {
 		btnAtras = new JButton("Atras");
 		btnAtras.setFont(new Font("Monospaced", Font.BOLD, 12));
 		btnAtras.setActionCommand("ATRAS");
-		btnAtras.setBounds(292, 294, 106, 23);
+		btnAtras.setBounds(292, 385, 106, 23);
 		panelContenedor.add(btnAtras);
 
 		/**
@@ -196,7 +189,7 @@ public class Agregar extends JFrame {
 		 */
 		lblMakoa = new JLabel("Makoa \u2122");
 		lblMakoa.setFont(new Font("Monospaced", Font.BOLD, 11));
-		lblMakoa.setBounds(358, 399, 52, 14);
+		lblMakoa.setBounds(371, 419, 52, 14);
 		panelContenedor.add(lblMakoa);
 		
 		txtDireccion = new JTextField();
@@ -218,19 +211,40 @@ public class Agregar extends JFrame {
 		TipoingCombo.setBounds(131, 396, 121, 24);
 		panelContenedor.add(TipoingCombo);
 		
-		lblNivel = new JLabel("Nivel:");
+		lblNivel = new JLabel("Clientes Captados:");
 		lblNivel.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
-		lblNivel.setBounds(292, 157, 43, 23);
+		lblNivel.setBounds(292, 157, 131, 23);
 		panelContenedor.add(lblNivel);
 		
-		nivelCombo = new JComboBox();
-		nivelCombo.setBounds(345, 160, 43, 20);
-		panelContenedor.add(nivelCombo);
+		lblSueldo = new JLabel("Sueldo:");
+		lblSueldo.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblSueldo.setBounds(292, 293, 58, 23);
+		panelContenedor.add(lblSueldo);
+		
+		lblValorSueldo = new JLabel("000000");
+		lblValorSueldo.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblValorSueldo.setBounds(292, 321, 58, 23);
+		panelContenedor.add(lblValorSueldo);
+		
+		txtClientesCap = new JTextField();
+		txtClientesCap.setColumns(10);
+		txtClientesCap.setBounds(292, 194, 68, 20);
+		panelContenedor.add(txtClientesCap);
+		
+		lblComisin = new JLabel("Comisi\u00F3n:");
+		lblComisin.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblComisin.setBounds(292, 225, 131, 23);
+		panelContenedor.add(lblComisin);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(292, 262, 68, 20);
+		panelContenedor.add(textField);
 
 		setVisible(true);
 	}
 
 	public static void main(String[] args) {
-		Agregar i1 = new Agregar();
+		Modificar_Comision i1 = new Modificar_Comision();
 	}
 }

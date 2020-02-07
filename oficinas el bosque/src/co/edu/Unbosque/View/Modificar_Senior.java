@@ -12,7 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 
-public class Agregar extends JFrame {
+public class Modificar_Senior extends JFrame {
 	private JPanel panelContenedor;
 	private JLabel lblLogoPersona;
 	private JTextField txtNombre;
@@ -25,7 +25,6 @@ public class Agregar extends JFrame {
 	private JLabel lblDireccion;
 	private JTextField txttelefono;
 	private JLabel lblAñoIngreso;
-	private JButton btnAgregar;
 	private JButton btnModificar;
 	private JButton btnAtras;
 	private JLabel lblNombre;
@@ -36,13 +35,15 @@ public class Agregar extends JFrame {
 	private JLabel lblTrabajador;
 	private JComboBox TipoingCombo;
 	private JLabel lblNivel;
-	private JComboBox nivelCombo;
+	private JLabel lblSueldo;
+	private JLabel lblValorSueldo;
+	private JTextField txtVentas;
 
-	public Agregar() {
+	public Modificar_Senior() {
 		/**
 		 * Caracteristicas de la ventana
 		 */
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Agregar.class.getResource("/images/logo bosque png.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Modificar_Senior.class.getResource("/images/logo bosque png.png")));
 		setTitle("Oficinas el bosque");
 		setSize(450, 473);
 		setResizable(false);
@@ -62,7 +63,7 @@ public class Agregar extends JFrame {
 		 * intuitiva la interaccion
 		 */
 		lblLogoPersona = new JLabel("");
-		lblLogoPersona.setIcon(new ImageIcon(Agregar.class.getResource("/images/Icon image 3.png")));
+		lblLogoPersona.setIcon(new ImageIcon(Modificar_Senior.class.getResource("/images/Icon image 3.png")));
 		lblLogoPersona.setBounds(171, 32, 81, 88);
 		panelContenedor.add(lblLogoPersona);
 
@@ -163,23 +164,13 @@ public class Agregar extends JFrame {
 		panelContenedor.add(lblAñoIngreso);
 
 		/**
-		 * Boton que agrega al la lista un estudiante con los datos ingresados en los
-		 * campos
-		 */
-		btnAgregar = new JButton("Agregar");
-		btnAgregar.setFont(new Font("Monospaced", Font.BOLD, 12));
-		btnAgregar.setActionCommand("AGREGAR");
-		btnAgregar.setBounds(292, 224, 106, 23);
-		panelContenedor.add(btnAgregar);
-
-		/**
 		 * Boton que modifica los datos del estudiante encontrado despues de haber sido
 		 * buscado mediante su codigo en la ventana principal
 		 */
 		btnModificar = new JButton("Modificar");
 		btnModificar.setFont(new Font("Monospaced", Font.BOLD, 12));
 		btnModificar.setActionCommand("MODIFICAR");
-		btnModificar.setBounds(292, 259, 106, 23);
+		btnModificar.setBounds(292, 270, 106, 23);
 		panelContenedor.add(btnModificar);
 
 		/**
@@ -188,7 +179,7 @@ public class Agregar extends JFrame {
 		btnAtras = new JButton("Atras");
 		btnAtras.setFont(new Font("Monospaced", Font.BOLD, 12));
 		btnAtras.setActionCommand("ATRAS");
-		btnAtras.setBounds(292, 294, 106, 23);
+		btnAtras.setBounds(292, 305, 106, 23);
 		panelContenedor.add(btnAtras);
 
 		/**
@@ -218,19 +209,30 @@ public class Agregar extends JFrame {
 		TipoingCombo.setBounds(131, 396, 121, 24);
 		panelContenedor.add(TipoingCombo);
 		
-		lblNivel = new JLabel("Nivel:");
+		lblNivel = new JLabel("Numero de Ventas:");
 		lblNivel.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
-		lblNivel.setBounds(292, 157, 43, 23);
+		lblNivel.setBounds(292, 157, 127, 23);
 		panelContenedor.add(lblNivel);
 		
-		nivelCombo = new JComboBox();
-		nivelCombo.setBounds(345, 160, 43, 20);
-		panelContenedor.add(nivelCombo);
+		lblSueldo = new JLabel("Sueldo:");
+		lblSueldo.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblSueldo.setBounds(292, 208, 58, 23);
+		panelContenedor.add(lblSueldo);
+		
+		lblValorSueldo = new JLabel("000000");
+		lblValorSueldo.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lblValorSueldo.setBounds(292, 236, 58, 23);
+		panelContenedor.add(lblValorSueldo);
+		
+		txtVentas = new JTextField();
+		txtVentas.setColumns(10);
+		txtVentas.setBounds(292, 179, 81, 20);
+		panelContenedor.add(txtVentas);
 
 		setVisible(true);
 	}
 
 	public static void main(String[] args) {
-		Agregar i1 = new Agregar();
+		Modificar_Senior i1 = new Modificar_Senior();
 	}
 }
