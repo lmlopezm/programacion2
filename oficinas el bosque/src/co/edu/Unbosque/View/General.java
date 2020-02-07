@@ -64,7 +64,7 @@ public class General extends JFrame {
 		/**
 		 * Etiqueta buscar estudiante
 		 */
-		lblBuscar = new JLabel("Buscar estudiante:");
+		lblBuscar = new JLabel("Buscar Trabajador:");
 		lblBuscar.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
 		lblBuscar.setBounds(26, 152, 125, 14);
 		panelContenedor.add(lblBuscar);
@@ -90,7 +90,7 @@ public class General extends JFrame {
 		 * Boton de accion que dirige al usuario a una ventana donde puede ingresar los
 		 * datos del sujeto a registrar
 		 */
-		btnAgregar = new JButton("Agregar Estudiante");
+		btnAgregar = new JButton("Agregar trabajador");
 		btnAgregar.setActionCommand("AGREGAR");
 		btnAgregar.setFont(new Font("Monospaced", Font.BOLD, 12));
 		btnAgregar.setBounds(26, 226, 171, 23);
@@ -108,7 +108,7 @@ public class General extends JFrame {
 		/**
 		 * Etiqueta de borrar Estudiante
 		 */
-		lblBorrar = new JLabel("Eliminar estudiante:");
+		lblBorrar = new JLabel("Eliminar trabajador:");
 		lblBorrar.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
 		lblBorrar.setBounds(26, 185, 136, 14);
 		panelContenedor.add(lblBorrar);

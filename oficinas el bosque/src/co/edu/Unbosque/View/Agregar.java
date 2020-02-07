@@ -23,8 +23,8 @@ public class Agregar extends JFrame {
 	private JLabel lblApellido;
 	private JLabel lblCedula;
 	private JLabel lblgenero;
-	private JLabel lblCiudad;
-	private JTextField txtCiudad;
+	private JLabel lbltelefono;
+	private JTextField txttelefono;
 	private JComboBox boxFacultad;
 	private JLabel lblFacultad;
 	private JButton btnAgregar;
@@ -40,7 +40,7 @@ public class Agregar extends JFrame {
 		 */
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Agregar.class.getResource("/images/logo bosque png.png")));
 		setTitle("Oficinas el bosque");
-		setSize(426, 453);
+		setSize(450, 460);
 		setResizable(false);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -97,7 +97,7 @@ public class Agregar extends JFrame {
 		/**
 		 * Etiqueta de la edad
 		 */
-		lblanioIngreso = new JLabel("anioIgreso:");
+		lblanioIngreso = new JLabel("añoingreso:");
 		lblanioIngreso.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
 		lblanioIngreso.setBounds(37, 225, 68, 23);
 		panelContenedor.add(lblanioIngreso);
@@ -145,18 +145,18 @@ public class Agregar extends JFrame {
 		/**
 		 * Etiqueta de la ciudad
 		 */
-		lblCiudad = new JLabel("Ciudad:");
-		lblCiudad.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
-		lblCiudad.setBounds(37, 327, 68, 23);
-		panelContenedor.add(lblCiudad);
+		lbltelefono = new JLabel("Telefono:");
+		lbltelefono.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
+		lbltelefono.setBounds(37, 327, 68, 23);
+		panelContenedor.add(lbltelefono);
 
 		/**
 		 * Txt donde se encuentra la ciudad de origen del sujeto
 		 */
-		txtCiudad = new JTextField();
-		txtCiudad.setColumns(10);
-		txtCiudad.setBounds(131, 330, 121, 20);
-		panelContenedor.add(txtCiudad);
+		txttelefono = new JTextField();
+		txttelefono.setColumns(10);
+		txttelefono.setBounds(131, 330, 121, 20);
+		panelContenedor.add(txttelefono);
 
 		/**
 		 * Combo box donde se encuentran las opciones de las diferentes facultades que
@@ -169,7 +169,7 @@ public class Agregar extends JFrame {
 		/**
 		 * Etiqueta de la facultad
 		 */
-		lblFacultad = new JLabel("Facultad:");
+		lblFacultad = new JLabel("trabajador :");
 		lblFacultad.setFont(new Font("MS Reference Sans Serif", Font.PLAIN, 13));
 		lblFacultad.setBounds(37, 361, 68, 23);
 		panelContenedor.add(lblFacultad);
