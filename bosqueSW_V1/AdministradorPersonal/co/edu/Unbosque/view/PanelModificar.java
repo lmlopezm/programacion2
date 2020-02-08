@@ -57,7 +57,7 @@ public class PanelModificar extends JPanel{
 		setLayout(null);
 		setBackground(new Color(217, 21, 11));
 		
-		lMensaje = new JLabel("Agregar nuevo personal");
+		lMensaje = new JLabel("Modificar personal");
 		lMensaje.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lMensaje.setForeground(Color.WHITE);
 		lMensaje.setBounds(15, 0, 400, 50);

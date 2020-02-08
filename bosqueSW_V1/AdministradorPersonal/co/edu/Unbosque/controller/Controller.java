@@ -97,6 +97,9 @@ public class Controller implements ActionListener {
 		if (e.getActionCommand().equals("Borrar")) {
 			System.out.println("Borrando...");
 		}
+		if (e.getActionCommand().equals("Guardar")) {
+			
+		}
 		
 	}
 

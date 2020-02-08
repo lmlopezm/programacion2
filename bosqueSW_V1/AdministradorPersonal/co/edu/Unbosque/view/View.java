@@ -43,12 +43,12 @@ public class View extends JFrame{
 		panBienvenido = new PanelBienvenida();
 		panBienvenido.setBounds(0, 100, 400, 500);
 		add(panBienvenido);
-		panBienvenido.setVisible(false);
+		panBienvenido.setVisible(true);
 		
 		panAgregar = new PanelAgregar();
 		panAgregar.setBounds(0, 100, 400, 500);
 		add(panAgregar);
-		panAgregar.setVisible(true);
+		panAgregar.setVisible(false);
 		
 		panModificar = new PanelModificar();
 		panModificar.setBounds(0, 100, 400, 500);
