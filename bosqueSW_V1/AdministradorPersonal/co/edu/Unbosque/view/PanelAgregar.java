@@ -44,6 +44,7 @@ public class PanelAgregar extends JPanel {
 
 	private JButton bGuardar;
 	private JButton bVolver;
+	private JLabel lblMakoa;
 
 	public PanelAgregar() {
 
@@ -192,6 +193,11 @@ public class PanelAgregar extends JPanel {
 		add(bVolver);
 
 		bVolver.setActionCommand(VOLVER);
+		
+		lblMakoa = new JLabel("Makoa \u2122");
+		lblMakoa.setFont(new Font("Monospaced", Font.BOLD, 11));
+		lblMakoa.setBounds(298, 11, 52, 14);
+		add(lblMakoa);
 
 		cbTipoPersonal.addItemListener(new ItemListener() {
 
@@ -391,5 +397,4 @@ public class PanelAgregar extends JPanel {
 	public static String getVolver() {
 		return VOLVER;
 	}
-
 }

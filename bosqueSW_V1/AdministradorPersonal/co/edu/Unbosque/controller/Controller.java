@@ -98,14 +98,14 @@ public class Controller implements ActionListener {
 			System.out.println("Borrando...");
 		}
 		if (e.getActionCommand().equals("Guardar")) {
-			//Senior
-//			Persona nuevo = new Persona(IG.getPanAgregar().get, IG.getPanAgregar().gettNombre(), null, 0, null, null, null, null) {
-//				Persona nuevaPersona = new Perso
-////				int Calcular_salario() {
-////					int i = 0;
-////					return i;
-////				}
-////			};
+//			Senior
+//			Persona nuevo = new Persona(IG.getPanAgregar().get, IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(), Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),  IG.getPanAgregar().gettGenero().getText(),  IG.getPanAgregar().gettTel().getText(),  IG.getPanAgregar().gettCorreo().getText(),  IG.getPanAgregar().gettDireccion().getText()) {
+//				int Calcular_salario() {
+//					int i = 0;
+//					return i;
+//				}
+//			};
+			
 			IG.getPanAgregar().gettNombre();
 		}
 		
