@@ -28,6 +28,8 @@ public class PanelModificar extends JPanel{
 	private JLabel Nivel;
 	private JLabel lSueldo;
 	private JLabel lNumVentas;
+	private JLabel lClientesCaptados;
+	private JLabel lMontoPorCliente;
 	
 	private JTextField tNombre;	
 	private JTextField tApellido;	
@@ -37,6 +39,8 @@ public class PanelModificar extends JPanel{
 	private JTextField tDireccion;	
 	private JTextField tAnioIngreso;
 	private JTextField tNumVentas;
+	private JTextField tCliCaptados;
+	private JTextField tMontoCliente;
 	
 	private JComboBox<String> cbNivel;
 	private JComboBox<String> cbTipoPersonal;
@@ -110,7 +114,7 @@ public class PanelModificar extends JPanel{
 		lCorreo.setBounds(50, 150, 150, 20);
 		add(lCorreo);
 		
-		tCorreo = new JTextField("  @gmail.com");
+		tCorreo = new JTextField(" ");
 		tCorreo.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tCorreo.setForeground(Color.BLACK);
 		tCorreo.setBounds(170, 150, 180, 20);
@@ -196,6 +200,34 @@ public class PanelModificar extends JPanel{
 		add(tNumVentas);
 		tNumVentas.setVisible(false);
 		
+		lClientesCaptados = new JLabel("# Clientes: ");
+		lClientesCaptados.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lClientesCaptados.setForeground(Color.WHITE);
+		lClientesCaptados.setBounds(50, 300, 150, 20);
+		add(lClientesCaptados);
+		lClientesCaptados.setVisible(false);
+		
+		tCliCaptados = new JTextField();
+		tCliCaptados.setFont(new Font("Tahoma", Font.BOLD, 18));
+		tCliCaptados.setForeground(Color.BLACK);
+		tCliCaptados.setBounds(170, 300, 180, 20);
+		add(tCliCaptados);
+		tCliCaptados.setVisible(false);
+		
+		lMontoPorCliente = new JLabel("$ por Cliente: ");
+		lMontoPorCliente.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lMontoPorCliente.setForeground(Color.WHITE);
+		lMontoPorCliente.setBounds(50, 325, 150, 20);
+		add(lMontoPorCliente);
+		lMontoPorCliente.setVisible(false);
+		
+		tMontoCliente = new JTextField();
+		tMontoCliente.setFont(new Font("Tahoma", Font.BOLD, 18));
+		tMontoCliente.setForeground(Color.BLACK);
+		tMontoCliente.setBounds(170, 325, 180, 20);
+		add(tMontoCliente);
+		tMontoCliente.setVisible(false);
+		
 		bModificar = new JButton("Modificar");
 		bModificar.setFont(new Font("Tahoma", Font.BOLD, 18));
 		bModificar.setBackground(Color.GRAY);
@@ -225,6 +257,10 @@ public class PanelModificar extends JPanel{
 					Nivel.setVisible(true);
 					lNumVentas.setVisible(false);
 					tNumVentas.setVisible(false);
+					lClientesCaptados.setVisible(false);
+					tCliCaptados.setVisible(false);
+					lMontoPorCliente.setVisible(false);
+					tMontoCliente.setVisible(false);
 				} 				
 				else {					
 					if (e.getItem() == "Ingeniero Senior") {
@@ -232,12 +268,33 @@ public class PanelModificar extends JPanel{
 						tNumVentas.setVisible(true);
 						cbNivel.setVisible(false);
 						Nivel.setVisible(false);
+						lClientesCaptados.setVisible(false);
+						tCliCaptados.setVisible(false);
+						lMontoPorCliente.setVisible(false);
+						tMontoCliente.setVisible(false);
 					}
 					else {
-						cbNivel.setVisible(false);
-						Nivel.setVisible(false);
-						lNumVentas.setVisible(false);
-						tNumVentas.setVisible(false);
+						if (e.getItem() == "A comisión") {
+							cbNivel.setVisible(false);
+							Nivel.setVisible(false);
+							lNumVentas.setVisible(false);
+							tNumVentas.setVisible(false);
+							lClientesCaptados.setVisible(true);
+							tCliCaptados.setVisible(true);
+							lMontoPorCliente.setVisible(true);
+							tMontoCliente.setVisible(true);
+							
+						} else {
+							cbNivel.setVisible(false);
+							Nivel.setVisible(false);
+							lNumVentas.setVisible(false);
+							tNumVentas.setVisible(false);
+							lClientesCaptados.setVisible(false);
+							tCliCaptados.setVisible(false);
+							lMontoPorCliente.setVisible(false);
+							tMontoCliente.setVisible(false);
+						}
+						
 					}
 
 				}
