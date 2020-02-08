@@ -16,6 +16,8 @@ public class View extends JFrame{
 	
 	private PanelAgregar panAgregar;
 	
+	private PanelModificar panModificar;
+	
 	public View(Controller controlador) {
 		
 		setSize(400, 600);
@@ -46,6 +48,11 @@ public class View extends JFrame{
 		panAgregar = new PanelAgregar();
 		panAgregar.setBounds(0, 100, 400, 500);
 		add(panAgregar);
+		panAgregar.setVisible(false);
+		
+		panModificar = new PanelModificar();
+		panModificar.setBounds(0, 100, 400, 500);
+		add(panModificar);
 		
 		
 	}
