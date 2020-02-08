@@ -114,7 +114,7 @@ public class PanelModificar extends JPanel{
 		lCorreo.setBounds(50, 150, 150, 20);
 		add(lCorreo);
 		
-		tCorreo = new JTextField("  @gmail.com");
+		tCorreo = new JTextField(" ");
 		tCorreo.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tCorreo.setForeground(Color.BLACK);
 		tCorreo.setBounds(170, 150, 180, 20);
@@ -257,6 +257,10 @@ public class PanelModificar extends JPanel{
 					Nivel.setVisible(true);
 					lNumVentas.setVisible(false);
 					tNumVentas.setVisible(false);
+					lClientesCaptados.setVisible(false);
+					tCliCaptados.setVisible(false);
+					lMontoPorCliente.setVisible(false);
+					tMontoCliente.setVisible(false);
 				} 				
 				else {					
 					if (e.getItem() == "Ingeniero Senior") {
@@ -264,6 +268,10 @@ public class PanelModificar extends JPanel{
 						tNumVentas.setVisible(true);
 						cbNivel.setVisible(false);
 						Nivel.setVisible(false);
+						lClientesCaptados.setVisible(false);
+						tCliCaptados.setVisible(false);
+						lMontoPorCliente.setVisible(false);
+						tMontoCliente.setVisible(false);
 					}
 					else {
 						if (e.getItem() == "A comisión") {
@@ -272,13 +280,19 @@ public class PanelModificar extends JPanel{
 							lNumVentas.setVisible(false);
 							tNumVentas.setVisible(false);
 							lClientesCaptados.setVisible(true);
-							tCliCaptados.setVisible(false);
+							tCliCaptados.setVisible(true);
+							lMontoPorCliente.setVisible(true);
+							tMontoCliente.setVisible(true);
 							
 						} else {
 							cbNivel.setVisible(false);
 							Nivel.setVisible(false);
 							lNumVentas.setVisible(false);
 							tNumVentas.setVisible(false);
+							lClientesCaptados.setVisible(false);
+							tCliCaptados.setVisible(false);
+							lMontoPorCliente.setVisible(false);
+							tMontoCliente.setVisible(false);
 						}
 						
 					}
