@@ -93,7 +93,7 @@ public class Controller implements ActionListener {
 		IG.getPanBienvenido();
 		IG.getPanModificar();
 
-		String cedula = "";
+		String cedula = IG.getPanBienvenido().gettBuscar().getText();
 
 		if (e.getActionCommand().equals("Volver")) {
 			IG.getPanBienvenido().setVisible(true);
@@ -131,13 +131,19 @@ public class Controller implements ActionListener {
 				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Uno")) {
 					niv = 1;
 				}
-
-				juniors.add(new Ingjunior(cedula, IG.getPanAgregar().gettNombre().getText(),
-						IG.getPanAgregar().gettApellido().getText(),
-						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettDireccion().getText(), niv));
-
+				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Dos")) {
+					niv = 2;
+				}
+				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Tres")) {
+					niv = 3;
+				}
+				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Cuatro")) {
+					niv = 4;
+				}
+				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Cinco")) {
+					niv = 5;
+				}
+				
 				/**
 				 * metodo agregar <b> pre </b> que existan los parametros <b> post </b> agregar
 				 * un usuario
@@ -154,29 +160,37 @@ public class Controller implements ActionListener {
 				 *                    direccion!=null
 				 * @param nivel       es el nivel del usuario. nivel!="", nivel!=null
 				 */
-				juniors.add(new Ingjunior(cedula, IG.getPanAgregar().gettNombre().getText(),
-						IG.getPanAgregar().gettApellido().getText(),
-						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettDireccion().getText(), niv));
-
-				System.out.println(juniors.get(0));
-				System.out.println(personas);
-				escribirEnArchivo();
+				juniors.add(new Ingjunior(	cedula, 
+											IG.getPanAgregar().gettNombre().getText(),
+											IG.getPanAgregar().gettApellido().getText(),
+											Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+											IG.getPanAgregar().gettGenero().getText(), 
+											IG.getPanAgregar().gettTel().getText(),
+											IG.getPanAgregar().gettCorreo().getText(), 
+											IG.getPanAgregar().gettDireccion().getText(), 
+											niv));
 			}
 			if (IG.getPanAgregar().getCbTipoPersonal().getSelectedItem().equals("Ingeniero Senior")) {
-				seniors.add(new Ingsenior(cedula, IG.getPanAgregar().gettNombre().getText(),
-						IG.getPanAgregar().gettApellido().getText(),
-						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0));
-				System.out.println(seniors);
-				escribirEnArchivo();
+				seniors.add(new Ingsenior(	cedula, 
+											IG.getPanAgregar().gettNombre().getText(),
+											IG.getPanAgregar().gettApellido().getText(),
+											Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+											IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+											IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0));
 			}
 			if (IG.getPanAgregar().getCbTipoPersonal().getSelectedItem().equals("A comisión")) {
-
+				comisiones.add(new Concomision(	cedula, 
+												IG.getPanAgregar().gettNombre().getText(), 
+												IG.getPanAgregar().gettApellido().getText(),
+												Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+												IG.getPanAgregar().gettGenero().getText(),
+												IG.getPanAgregar().gettTel().getText(), 
+												IG.getPanAgregar().gettCorreo().getText(), 
+												IG.getPanAgregar().gettDireccion().getText(), 
+												0, 
+												0));
 			}
-
+			escribirEnArchivo();
 		}
 
 	}
