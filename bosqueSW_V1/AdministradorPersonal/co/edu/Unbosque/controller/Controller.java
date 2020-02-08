@@ -1,21 +1,20 @@
 package co.edu.Unbosque.controller;
 
-import java.awt.event.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+//import java.io.File;
+//import java.io.ObjectInputStream;
+//import java.io.ObjectOutput;
 
-import co.edu.Unbosque.view.*;
+import co.edu.Unbosque.view.PanelAgregar;
+import co.edu.Unbosque.view.View;
 
 public class Controller implements ActionListener {
 
 	private View IG;
-	private ObjectInputStream entrada;
-	private ObjectOutput salida;
-	private File archivo = new File("data/datos.dat");
+//	private ObjectInputStream entrada;
+//	private ObjectOutput salida;
+//	private File archivo = new File("data/datos.dat");
 
 	public Controller() {
 
