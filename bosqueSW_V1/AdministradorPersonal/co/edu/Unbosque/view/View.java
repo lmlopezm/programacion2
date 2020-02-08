@@ -63,6 +63,7 @@ public class View extends JFrame{
 		
 		panModificar.getbModificar().addActionListener(controlador);
 		panModificar.getbVolver2().addActionListener(controlador);
+		panModificar.getbBorrar().addActionListener(controlador);
 		
 		
 

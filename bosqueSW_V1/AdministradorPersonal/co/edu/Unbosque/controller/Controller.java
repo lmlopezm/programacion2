@@ -85,6 +85,9 @@ public class Controller implements ActionListener {
 			IG.getPanModificar().setVisible(false);
 			IG.getPanBienvenido().setVisible(true);
 		}
+		if (e.getActionCommand().equals("Borrar")) {
+			System.out.println("Borrando...");
+		}
 		
 	}
 
