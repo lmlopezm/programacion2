@@ -1,14 +1,8 @@
 package co.edu.Unbosque.controller;
 
 import java.awt.event.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
 import co.edu.Unbosque.Model.Persona;
 import co.edu.Unbosque.view.*;
@@ -79,10 +73,31 @@ public class Controller implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		if (e.getActionCommand().equals(PanelAgregar.VOLVER)) {
-
+		
+		IG.getPanAgregar();
+		IG.getPanBienvenido();
+		IG.getPanModificar();
+		
+		if (e.getActionCommand().equals("Volver")) {
+			IG.getPanBienvenido().setVisible(true);
+			IG.getPanAgregar().setVisible(false);
 		}
-
+		if (e.getActionCommand().equals("Agregar")) {
+			IG.getPanBienvenido().setVisible(false);
+			IG.getPanAgregar().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Buscar")) {
+			IG.getPanBienvenido().setVisible(false);
+			IG.getPanModificar().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Volver2")) {
+			IG.getPanModificar().setVisible(false);
+			IG.getPanBienvenido().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Borrar")) {
+			System.out.println("Borrando...");
+		}
+		
 	}
 
 }

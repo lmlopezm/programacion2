@@ -1,7 +1,7 @@
 package co.edu.Unbosque.Model;
 
 public class Consalariofijo extends Persona {
-	final int Sueldo_fijo = 3500000;
+	private final int SUELDO_FIJO = 3500000;
 
 	/**
 	 * metodo constructor <b> pre </b> que los atributos ya esten creados <b> post
@@ -30,7 +30,7 @@ public class Consalariofijo extends Persona {
 	 * @return Sueldo_fijo
 	 */
 	public int getSueldo_fijo() {
-		return Sueldo_fijo;
+		return SUELDO_FIJO;
 	}
 
 	@Override
