@@ -406,5 +406,22 @@ public class PanelAgregar extends JPanel {
 		return VOLVER;
 	}
 
+	public JLabel getlCedula() {
+		return lCedula;
+	}
+
+	public void setlCedula(JLabel lCedula) {
+		this.lCedula = lCedula;
+	}
+
+	public JTextField gettCedula() {
+		return tCedula;
+	}
+
+	public void settCedula(JTextField tCedula) {
+		this.tCedula = tCedula;
+	}
+	
+
 
 }

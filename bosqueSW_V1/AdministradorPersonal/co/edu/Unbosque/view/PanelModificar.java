@@ -640,6 +640,26 @@ public class PanelModificar extends JPanel{
 	public static String getBorrar() {
 		return BORRAR;
 	}
+
+
+	public JLabel getlCedula() {
+		return lCedula;
+	}
+
+
+	public void setlCedula(JLabel lCedula) {
+		this.lCedula = lCedula;
+	}
+
+
+	public JTextField gettCedula() {
+		return tCedula;
+	}
+
+
+	public void settCedula(JTextField tCedula) {
+		this.tCedula = tCedula;
+	}
 	
 
 
