@@ -23,16 +23,34 @@ public Ingsenior(String cedula, String nombre, String apellidos, int anioIngreso
 }
 
 
+/**
+ * metodo para obtener el numero de ventas 
+ * <b> pre <b> que exista el atributo
+ * <b> post <b> obtener el numero de ventas 
+ * @return Numerodeventas
+ */
 public int getNumerodeventas() {
 	return numerodeventas;
 }
 
-
+/**
+ * metodo para actualizar el Numerodeventas
+ * <b> pre </b> que exista el atributo
+ * <b> post </b> se ha modificado el Numerodeventas
+ * @param Numerodeventas son el Numerodeventas del usuario. Numerodeventas!=null, Numerodeventas!=""
+ */
 public void setNumerodeventas(int numerodeventas) {
 	this.numerodeventas = numerodeventas;
 }
 
-
+/**
+ * metodo para calular el salario
+ * <b> pre </b> que exista el trabajador
+ * <b> post </b> calcular el salario
+ * @param salario es el salario del usuario. salario!=null, salario!=""
+ * @param numerodeventas es el numerodeventas del usurio. numerodeventas!=null, numerodeventas!=""
+ * @return salario
+ */
 @Override
 int Calcular_salario() {
 	// TODO Auto-generated method stub

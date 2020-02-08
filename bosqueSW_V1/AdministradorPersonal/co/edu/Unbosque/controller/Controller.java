@@ -56,10 +56,10 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * Metodo que al pasarle por parametro un objeto persona lo escribe en el
-	 * archivo
-	 * 
-	 * @param persona
+	 * Metodo agregar una persona en el archivo 
+	 * <b> pre </b> El arreglo personas ya esta creado.
+	 * <b> post </b> Se ha agregado un nuevo objeto y se ha agregado al arreglo.
+	 * @param persona persona != null. persona != "".
 	 */
 	public void escribirEnArchivo(Persona persona) {
 		try {
@@ -73,19 +73,19 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * Metodo de agregar empleado por comision el cual hace uso de el metodo buscar
-	 * persona para validar si el usuario nuevo ya existe o no
-	 * 
-	 * @param cedula
-	 * @param nombre
-	 * @param apellido
-	 * @param anioIngreso
-	 * @param genero
-	 * @param telefono
-	 * @param correo
-	 * @param direccion
-	 * @param Clientes
-	 * @param ComisionxCliente
+	 * metodo agregar
+	 * <b> pre </b> que existan los parametros
+	 * <b> post </b> agregar un usuario
+	 * @param cedula es la cedula del usuario. cedula!=null, cedula!=""
+	 * @param nombre es el nombre del usuario. nombre!="", nombre!=""
+	 * @param apellido es el apellido del usuario. apellido!=null, apellido!=""
+	 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null, anioIngreso!=""
+	 * @param genero es el genero del usuario. genero!="", genero!=null
+	 * @param telefono es el telefono. telefono!="", telefono!=null
+	 * @param correo es el correo del usuario. correo!="", correo!=""
+	 * @param direccion es la direccion del usuario. direccion!="", direccion!=null
+	 * @param Clientes es el nClientes del usuario. Clientes!="", Clientes!=null
+	 * @param ComisionxCliente es la ComisionxCliente del usuario. ComisionxCliente!="", ComisionxCliente!=null
 	 * @return
 	 */
 	public boolean agregarComision(String cedula, String nombre, String apellido, int anioIngreso, String genero,
@@ -106,7 +106,21 @@ public class Controller implements ActionListener {
 		}
 
 	}
-
+	/**
+	 * metodo agregar
+	 * <b> pre </b> que existan los parametros
+	 * <b> post </b> agregar un usuario
+	 * @param cedula es la cedula del usuario. cedula!=null, cedula!=""
+	 * @param nombre es el nombre del usuario. nombre!="", nombre!=""
+	 * @param apellido es el apellido del usuario. apellido!=null, apellido!=""
+	 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null, anioIngreso!=""
+	 * @param genero es el genero del usuario. genero!="", genero!=null
+	 * @param telefono es el telefono. telefono!="", telefono!=null
+	 * @param correo es el correo del usuario. correo!="", correo!=""
+	 * @param direccion es la direccion del usuario. direccion!="", direccion!=null
+	 * @param nivel es el nivel del usuario. nivel!="", nivel!=null
+	 * @return
+	 */
 	public boolean agregarJunior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
 			String telefono, String correo, String direccion, int nivel) {
 		Ingjunior nuevo = new Ingjunior(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion,
@@ -124,7 +138,22 @@ public class Controller implements ActionListener {
 		}
 
 	}
-
+	/**
+	 * metodo agregar
+	 * <b> pre </b> que existan los parametros
+	 * <b> post </b> agregar un usuario
+	 * @param cedula es la cedula del usuario. cedula!=null, cedula!=""
+	 * @param nombre es el nombre del usuario. nombre!="", nombre!=""
+	 * @param apellido es el apellido del usuario. apellido!=null, apellido!=""
+	 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null, anioIngreso!=""
+	 * @param genero es el genero del usuario. genero!="", genero!=null
+	 * @param telefono es el telefono. telefono!="", telefono!=null
+	 * @param correo es el correo del usuario. correo!="", correo!=""
+	 * @param direccion es la direccion del usuario. direccion!="", direccion!=null
+	 * @param Clientes es el nClientes del usuario. Clientes!="", Clientes!=null
+	 * @param ComisionxCliente es el ComisionxCliente del usuario. ComisionxCliente!="", ComisionxCliente!=null
+	 * @return
+	 */
 	public boolean agregarSenior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
 			String telefono, String correo, String direccion, int numVentas) {
 
@@ -144,11 +173,11 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * Metodo que busca en el arreglo de personas, una persona que tenga la cedula
-	 * pasada por parametro
-	 * 
-	 * @param cedula
-	 * @return
+	 * metodo buscar usuario
+	 * <b> pre </b> que existan los parametros
+	 * <b> post </b> buscar un usuario
+	 * @param cedula es la cedula del usuario. cedula!="", cedula!=null
+	 * @return encontrado
 	 */
 	public Persona buscarPersona(String cedula) {
 		Persona encontrado = null;
