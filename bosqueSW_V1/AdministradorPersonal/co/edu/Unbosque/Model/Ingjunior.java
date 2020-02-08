@@ -22,6 +22,16 @@ public class Ingjunior extends Persona{
 	}
 	
 
+	public int getNivel() {
+		return nivel;
+	}
+
+
+	public void setNivel(int nivel) {
+		this.nivel = nivel;
+	}
+
+
 	@Override
 	int Calcular_salario() {
 		// TODO Auto-generated method stub

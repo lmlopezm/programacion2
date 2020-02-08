@@ -23,6 +23,16 @@ public Ingsenior(String cedula, String nombre, String apellidos, int anioIngreso
 }
 
 
+public int getNumerodeventas() {
+	return numerodeventas;
+}
+
+
+public void setNumerodeventas(int numerodeventas) {
+	this.numerodeventas = numerodeventas;
+}
+
+
 @Override
 int Calcular_salario() {
 	// TODO Auto-generated method stub
