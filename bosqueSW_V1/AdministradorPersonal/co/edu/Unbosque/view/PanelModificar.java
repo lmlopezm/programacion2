@@ -305,6 +305,301 @@ public class PanelModificar extends JPanel{
 		});
 		
 	}
+
+
+	public JLabel getlMensaje() {
+		return lMensaje;
+	}
+
+
+	public void setlMensaje(JLabel lMensaje) {
+		this.lMensaje = lMensaje;
+	}
+
+
+	public JLabel getlNombre() {
+		return lNombre;
+	}
+
+
+	public void setlNombre(JLabel lNombre) {
+		this.lNombre = lNombre;
+	}
+
+
+	public JLabel getlApellido() {
+		return lApellido;
+	}
+
+
+	public void setlApellido(JLabel lApellido) {
+		this.lApellido = lApellido;
+	}
+
+
+	public JLabel getlGenero() {
+		return lGenero;
+	}
+
+
+	public void setlGenero(JLabel lGenero) {
+		this.lGenero = lGenero;
+	}
+
+
+	public JLabel getlTel() {
+		return lTel;
+	}
+
+
+	public void setlTel(JLabel lTel) {
+		this.lTel = lTel;
+	}
+
+
+	public JLabel getlCorreo() {
+		return lCorreo;
+	}
+
+
+	public void setlCorreo(JLabel lCorreo) {
+		this.lCorreo = lCorreo;
+	}
+
+
+	public JLabel getlDireccion() {
+		return lDireccion;
+	}
+
+
+	public void setlDireccion(JLabel lDireccion) {
+		this.lDireccion = lDireccion;
+	}
+
+
+	public JLabel getAnioIngreso() {
+		return AnioIngreso;
+	}
+
+
+	public void setAnioIngreso(JLabel anioIngreso) {
+		AnioIngreso = anioIngreso;
+	}
+
+
+	public JLabel getTipoPersonal() {
+		return tipoPersonal;
+	}
+
+
+	public void setTipoPersonal(JLabel tipoPersonal) {
+		this.tipoPersonal = tipoPersonal;
+	}
+
+
+	public JLabel getNivel() {
+		return Nivel;
+	}
+
+
+	public void setNivel(JLabel nivel) {
+		Nivel = nivel;
+	}
+
+
+	public JLabel getlSueldo() {
+		return lSueldo;
+	}
+
+
+	public void setlSueldo(JLabel lSueldo) {
+		this.lSueldo = lSueldo;
+	}
+
+
+	public JLabel getlNumVentas() {
+		return lNumVentas;
+	}
+
+
+	public void setlNumVentas(JLabel lNumVentas) {
+		this.lNumVentas = lNumVentas;
+	}
+
+
+	public JLabel getlClientesCaptados() {
+		return lClientesCaptados;
+	}
+
+
+	public void setlClientesCaptados(JLabel lClientesCaptados) {
+		this.lClientesCaptados = lClientesCaptados;
+	}
+
+
+	public JLabel getlMontoPorCliente() {
+		return lMontoPorCliente;
+	}
+
+
+	public void setlMontoPorCliente(JLabel lMontoPorCliente) {
+		this.lMontoPorCliente = lMontoPorCliente;
+	}
+
+
+	public JTextField gettNombre() {
+		return tNombre;
+	}
+
+
+	public void settNombre(JTextField tNombre) {
+		this.tNombre = tNombre;
+	}
+
+
+	public JTextField gettApellido() {
+		return tApellido;
+	}
+
+
+	public void settApellido(JTextField tApellido) {
+		this.tApellido = tApellido;
+	}
+
+
+	public JTextField gettGenero() {
+		return tGenero;
+	}
+
+
+	public void settGenero(JTextField tGenero) {
+		this.tGenero = tGenero;
+	}
+
+
+	public JTextField gettTel() {
+		return tTel;
+	}
+
+
+	public void settTel(JTextField tTel) {
+		this.tTel = tTel;
+	}
+
+
+	public JTextField gettCorreo() {
+		return tCorreo;
+	}
+
+
+	public void settCorreo(JTextField tCorreo) {
+		this.tCorreo = tCorreo;
+	}
+
+
+	public JTextField gettDireccion() {
+		return tDireccion;
+	}
+
+
+	public void settDireccion(JTextField tDireccion) {
+		this.tDireccion = tDireccion;
+	}
+
+
+	public JTextField gettAnioIngreso() {
+		return tAnioIngreso;
+	}
+
+
+	public void settAnioIngreso(JTextField tAnioIngreso) {
+		this.tAnioIngreso = tAnioIngreso;
+	}
+
+
+	public JTextField gettNumVentas() {
+		return tNumVentas;
+	}
+
+
+	public void settNumVentas(JTextField tNumVentas) {
+		this.tNumVentas = tNumVentas;
+	}
+
+
+	public JTextField gettCliCaptados() {
+		return tCliCaptados;
+	}
+
+
+	public void settCliCaptados(JTextField tCliCaptados) {
+		this.tCliCaptados = tCliCaptados;
+	}
+
+
+	public JTextField gettMontoCliente() {
+		return tMontoCliente;
+	}
+
+
+	public void settMontoCliente(JTextField tMontoCliente) {
+		this.tMontoCliente = tMontoCliente;
+	}
+
+
+	public JComboBox<String> getCbNivel() {
+		return cbNivel;
+	}
+
+
+	public void setCbNivel(JComboBox<String> cbNivel) {
+		this.cbNivel = cbNivel;
+	}
+
+
+	public JComboBox<String> getCbTipoPersonal() {
+		return cbTipoPersonal;
+	}
+
+
+	public void setCbTipoPersonal(JComboBox<String> cbTipoPersonal) {
+		this.cbTipoPersonal = cbTipoPersonal;
+	}
+
+
+	public JButton getbModificar() {
+		return bModificar;
+	}
+
+
+	public void setbModificar(JButton bModificar) {
+		this.bModificar = bModificar;
+	}
+
+
+	public JButton getbVolver2() {
+		return bVolver2;
+	}
+
+
+	public void setbVolver2(JButton bVolver2) {
+		this.bVolver2 = bVolver2;
+	}
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+	public static String getModificar() {
+		return MODIFICAR;
+	}
+
+
+	public static String getVolver2() {
+		return VOLVER2;
+	}
 	
 
 

@@ -57,4 +57,36 @@ public class View extends JFrame{
 		
 	}
 
+	public PanelLogo getPanLogo() {
+		return panLogo;
+	}
+
+	public void setPanLogo(PanelLogo panLogo) {
+		this.panLogo = panLogo;
+	}
+
+	public PanelBienvenida getPanBienvenido() {
+		return panBienvenido;
+	}
+
+	public void setPanBienvenido(PanelBienvenida panBienvenido) {
+		this.panBienvenido = panBienvenido;
+	}
+
+	public PanelAgregar getPanAgregar() {
+		return panAgregar;
+	}
+
+	public void setPanAgregar(PanelAgregar panAgregar) {
+		this.panAgregar = panAgregar;
+	}
+
+	public PanelModificar getPanModificar() {
+		return panModificar;
+	}
+
+	public void setPanModificar(PanelModificar panModificar) {
+		this.panModificar = panModificar;
+	}
+
 }
