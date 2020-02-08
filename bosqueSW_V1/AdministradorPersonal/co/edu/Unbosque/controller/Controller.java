@@ -1,14 +1,8 @@
 package co.edu.Unbosque.controller;
 
 import java.awt.event.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 
 import co.edu.Unbosque.Model.Persona;
 import co.edu.Unbosque.view.*;
