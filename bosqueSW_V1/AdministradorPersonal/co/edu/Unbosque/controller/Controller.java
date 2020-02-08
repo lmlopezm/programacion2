@@ -70,16 +70,33 @@ public class Controller implements ActionListener {
 
 	}
 
+	/**
+	 * Metodo de agregar empleado por comision el cual hace uso de el metodo buscar
+	 * persona para validar si el usuario nuevo ya existe o no
+	 * 
+	 * @param cedula
+	 * @param nombre
+	 * @param apellido
+	 * @param anioIngreso
+	 * @param genero
+	 * @param telefono
+	 * @param correo
+	 * @param direccion
+	 * @param Clientes
+	 * @param ComisionxCliente
+	 * @return
+	 */
 	public boolean agregarComision(String cedula, String nombre, String apellido, int anioIngreso, String genero,
 			String telefono, String correo, String direccion, int Clientes, int ComisionxCliente) {
 
-		//IG.getPanAgregar().gettCedula().getText(),
+		// IG.getPanAgregar().gettCedula().getText(),
 //		IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
 //		Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
 //		IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
 //		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
-		Concomision nuevo = new Concomision(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion, 0, 0);
-		if (buscarProducto(cedula) == null) {
+		Concomision nuevo = new Concomision(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion,
+				0, 0);
+		if (buscarPersona(cedula) == null) {
 			personas.add(nuevo);
 			JOptionPane.showMessageDialog(null, "El empleado con: " + cedula + " ha sido agregado", "Oficias el Bosque",
 					JOptionPane.INFORMATION_MESSAGE);
@@ -92,20 +109,26 @@ public class Controller implements ActionListener {
 
 	}
 
-	public Persona buscarProducto(String identificador) {
+	/**
+	 * Metodo que busca en el arreglo de personas, una persona que tenga la cedula
+	 * pasada por parametro
+	 * 
+	 * @param cedula
+	 * @return
+	 */
+	public Persona buscarPersona(String cedula) {
 		Persona encontrado = null;
 
 		if (!personas.isEmpty()) {
 			System.out.println(personas);
 			for (int i = 0; i < personas.size(); i++) {
-				if (personas.get(i).getTelefono().equals(identificador)) {
+				if (personas.get(i).getTelefono().equals(cedula)) {
 					encontrado = personas.get(i);
 					JOptionPane.showMessageDialog(null, "Ingeniero: " + encontrado);
 				}
 			}
 		} else {
-			JOptionPane.showMessageDialog(null,
-					"el producto con el ID: " + identificador + " no se encuentra registrado");
+			JOptionPane.showMessageDialog(null, "el producto con el ID: " + cedula + " no se encuentra registrado");
 		}
 
 		return encontrado;
@@ -138,7 +161,6 @@ public class Controller implements ActionListener {
 			System.out.println("Borrando...");
 		}
 		if (e.getActionCommand().equals("Guardar")) {
-
 
 		}
 
