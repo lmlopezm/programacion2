@@ -41,7 +41,7 @@ public int getNdeclientescap() {
 	}
 
 /**
- * metodo para actualizar los ingresos
+ * metodo para actualizar los Ndeclientescap
  * <b> pre </b> que exista el atributo
  * <b> post </b> se ha modificado el numero de clientes captados
  * @param el Nclintescap son los clientes captados por el usuario. Ndeclientescap!=null, Ndeclientescap!=""
@@ -86,7 +86,15 @@ public int getNdeclientescap() {
 	}
 
 
-
+	/**
+	 * metodo para calular el salario
+	 * <b> pre </b> que exista el trabajador
+	 * <b> post </b> calcular el salario
+	 * @param salario es el salario del usuario. salario!=null, salario!=""
+	 * @param Ndeclientescap es el Ndeclientescap del usuario. Ndeclientescap!=null, Ndeclientescap!=""
+	 * @param MontoPorclientes es el MontoPorclientes del usuario. MontoPorclientes!=null, MontoPorclientes!=""
+	 * @return salario
+	 */
 @Override
 int Calcular_salario() {
 	// TODO Auto-generated method stub

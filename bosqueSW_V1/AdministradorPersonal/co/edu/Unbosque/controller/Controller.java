@@ -56,10 +56,10 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * Metodo que al pasarle por parametro un objeto persona lo escribe en el
-	 * archivo
-	 * 
-	 * @param persona
+	 * Metodo agregar una persona en el archivo 
+	 * <b> pre </b> El arreglo personas ya esta creado.
+	 * <b> post </b> Se ha agregado un nuevo objeto y se ha agregado al arreglo.
+	 * @param persona persona != null. persona != "".
 	 */
 	public void escribirEnArchivo(Persona persona) {
 		try {

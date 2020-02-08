@@ -37,7 +37,15 @@ public class Consalariofijo extends Persona {
 	}
 	
 	
-
+	/**
+	 * metodo para calular el salario
+	 * <b> pre </b> que exista el trabajador
+	 * <b> post </b> calcular el salario
+	 * @param getAnioIngreso es el getAnioIngreso del usuario. getAnioIngreso!=null, getAnioIngreso!=""
+	 * @param Ndeclientescap es el Ndeclientescap del usuario. Ndeclientescap!=null, Ndeclientescap!=""
+	 * @param MontoPorclientes es el MontoPorclientes del usuario. MontoPorclientes!=null, MontoPorclientes!=""
+	 * @return salario
+	 */
 	@Override
 	int Calcular_salario() {
 		if(getAnioIngreso()<2) {
