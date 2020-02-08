@@ -22,25 +22,25 @@ public class Controller implements ActionListener {
 
 		personas = new ArrayList<Persona>();
 
-		if (archivo.exists()) {
-			System.out.println("El archivo ya existe");
-		} else {
-			try {
-				archivo.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-
-		if (archivo.length() != 0) {
-			try {
-				entrada = new ObjectInputStream(new FileInputStream(archivo));
-				personas = (ArrayList<Persona>) entrada.readObject();
-			} catch (ClassNotFoundException | IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+//		if (archivo.exists()) {
+//			System.out.println("El archivo ya existe");
+//		} else {
+//			try {
+//				archivo.createNewFile();
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//
+//		if (archivo.length() != 0) {
+//			try {
+//				entrada = new ObjectInputStream(new FileInputStream(archivo));
+//				personas = (ArrayList<Persona>) entrada.readObject();
+//			} catch (ClassNotFoundException | IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
 
 	}
 
@@ -98,7 +98,15 @@ public class Controller implements ActionListener {
 			System.out.println("Borrando...");
 		}
 		if (e.getActionCommand().equals("Guardar")) {
-			
+			//Senior
+//			Persona nuevo = new Persona(IG.getPanAgregar().get, IG.getPanAgregar().gettNombre(), null, 0, null, null, null, null) {
+//				Persona nuevaPersona = new Perso
+////				int Calcular_salario() {
+////					int i = 0;
+////					return i;
+////				}
+////			};
+			IG.getPanAgregar().gettNombre();
 		}
 		
 	}
