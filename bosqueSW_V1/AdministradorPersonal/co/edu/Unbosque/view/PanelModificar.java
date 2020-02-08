@@ -182,7 +182,6 @@ public class PanelModificar extends JPanel{
 		cbNivel.addItem("Tres");	
 		cbNivel.addItem("Cuatro");
 		cbNivel.addItem("Cinco");
-		cbNivel.addItem("Seis");
 		add(cbNivel);
 		cbNivel.setVisible(false);
 		
