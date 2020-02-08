@@ -73,11 +73,12 @@ public class Controller implements ActionListener {
 	public boolean agregarComision(String cedula, String nombre, String apellido, int anioIngreso, String genero,
 			String telefono, String correo, String direccion, int Clientes, int ComisionxCliente) {
 
-		Concomision nuevo = new Concomision(IG.getPanAgregar().gettCedula().getText(),
-				IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
-				Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-				IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-				IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0);
+		//IG.getPanAgregar().gettCedula().getText(),
+//		IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
+//		Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+//		IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+//		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
+		Concomision nuevo = new Concomision(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion, 0, 0);
 		if (buscarProducto(cedula) == null) {
 			personas.add(nuevo);
 			JOptionPane.showMessageDialog(null, "El empleado con: " + cedula + " ha sido agregado", "Oficias el Bosque",
@@ -137,6 +138,7 @@ public class Controller implements ActionListener {
 			System.out.println("Borrando...");
 		}
 		if (e.getActionCommand().equals("Guardar")) {
+
 //			Senior
 //			Persona nuevo = new Persona(IG.getPanAgregar().gettCedula().getText(),
 //					IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
