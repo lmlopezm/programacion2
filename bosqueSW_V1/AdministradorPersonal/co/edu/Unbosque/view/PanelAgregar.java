@@ -212,4 +212,184 @@ public class PanelAgregar extends JPanel {
 
 	}
 
+	public JLabel getlMensaje() {
+		return lMensaje;
+	}
+
+	public void setlMensaje(JLabel lMensaje) {
+		this.lMensaje = lMensaje;
+	}
+
+	public JLabel getlNombre() {
+		return lNombre;
+	}
+
+	public void setlNombre(JLabel lNombre) {
+		this.lNombre = lNombre;
+	}
+
+	public JLabel getlApellido() {
+		return lApellido;
+	}
+
+	public void setlApellido(JLabel lApellido) {
+		this.lApellido = lApellido;
+	}
+
+	public JLabel getlGenero() {
+		return lGenero;
+	}
+
+	public void setlGenero(JLabel lGenero) {
+		this.lGenero = lGenero;
+	}
+
+	public JLabel getlTel() {
+		return lTel;
+	}
+
+	public void setlTel(JLabel lTel) {
+		this.lTel = lTel;
+	}
+
+	public JLabel getlCorreo() {
+		return lCorreo;
+	}
+
+	public void setlCorreo(JLabel lCorreo) {
+		this.lCorreo = lCorreo;
+	}
+
+	public JLabel getlDireccion() {
+		return lDireccion;
+	}
+
+	public void setlDireccion(JLabel lDireccion) {
+		this.lDireccion = lDireccion;
+	}
+
+	public JLabel getAnioIngreso() {
+		return AnioIngreso;
+	}
+
+	public void setAnioIngreso(JLabel anioIngreso) {
+		AnioIngreso = anioIngreso;
+	}
+
+	public JLabel getTipoPersonal() {
+		return tipoPersonal;
+	}
+
+	public void setTipoPersonal(JLabel tipoPersonal) {
+		this.tipoPersonal = tipoPersonal;
+	}
+
+	public JLabel getNivel() {
+		return Nivel;
+	}
+
+	public void setNivel(JLabel nivel) {
+		Nivel = nivel;
+	}
+
+	public JTextField gettNombre() {
+		return tNombre;
+	}
+
+	public void settNombre(JTextField tNombre) {
+		this.tNombre = tNombre;
+	}
+
+	public JTextField gettApellido() {
+		return tApellido;
+	}
+
+	public void settApellido(JTextField tApellido) {
+		this.tApellido = tApellido;
+	}
+
+	public JTextField gettGenero() {
+		return tGenero;
+	}
+
+	public void settGenero(JTextField tGenero) {
+		this.tGenero = tGenero;
+	}
+
+	public JTextField gettTel() {
+		return tTel;
+	}
+
+	public void settTel(JTextField tTel) {
+		this.tTel = tTel;
+	}
+
+	public JTextField gettCorreo() {
+		return tCorreo;
+	}
+
+	public void settCorreo(JTextField tCorreo) {
+		this.tCorreo = tCorreo;
+	}
+
+	public JTextField gettDireccion() {
+		return tDireccion;
+	}
+
+	public void settDireccion(JTextField tDireccion) {
+		this.tDireccion = tDireccion;
+	}
+
+	public JTextField gettAnioIngreso() {
+		return tAnioIngreso;
+	}
+
+	public void settAnioIngreso(JTextField tAnioIngreso) {
+		this.tAnioIngreso = tAnioIngreso;
+	}
+
+	public JComboBox<String> getCbNivel() {
+		return cbNivel;
+	}
+
+	public void setCbNivel(JComboBox<String> cbNivel) {
+		this.cbNivel = cbNivel;
+	}
+
+	public JComboBox<String> getCbTipoPersonal() {
+		return cbTipoPersonal;
+	}
+
+	public void setCbTipoPersonal(JComboBox<String> cbTipoPersonal) {
+		this.cbTipoPersonal = cbTipoPersonal;
+	}
+
+	public JButton getbGuardar() {
+		return bGuardar;
+	}
+
+	public void setbGuardar(JButton bGuardar) {
+		this.bGuardar = bGuardar;
+	}
+
+	public JButton getbVolver() {
+		return bVolver;
+	}
+
+	public void setbVolver(JButton bVolver) {
+		this.bVolver = bVolver;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public static String getGuardar() {
+		return GUARDAR;
+	}
+
+	public static String getVolver() {
+		return VOLVER;
+	}
+
 }

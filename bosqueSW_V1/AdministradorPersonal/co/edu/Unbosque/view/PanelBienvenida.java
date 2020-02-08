@@ -67,4 +67,69 @@ public class PanelBienvenida extends JPanel{
 		
 	}
 
+
+	public JLabel getlBienvenida() {
+		return lBienvenida;
+	}
+
+
+	public void setlBienvenida(JLabel lBienvenida) {
+		this.lBienvenida = lBienvenida;
+	}
+
+
+	public JLabel getlBuscar() {
+		return lBuscar;
+	}
+
+
+	public void setlBuscar(JLabel lBuscar) {
+		this.lBuscar = lBuscar;
+	}
+
+
+	public JTextField gettBuscar() {
+		return tBuscar;
+	}
+
+
+	public void settBuscar(JTextField tBuscar) {
+		this.tBuscar = tBuscar;
+	}
+
+
+	public JButton getbBuscar() {
+		return bBuscar;
+	}
+
+
+	public void setbBuscar(JButton bBuscar) {
+		this.bBuscar = bBuscar;
+	}
+
+
+	public JButton getbAgregar() {
+		return bAgregar;
+	}
+
+
+	public void setbAgregar(JButton bAgregar) {
+		this.bAgregar = bAgregar;
+	}
+
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+	public static String getBuscar() {
+		return BUSCAR;
+	}
+
+
+	public static String getAgregar() {
+		return AGREGAR;
+	}
+
 }
