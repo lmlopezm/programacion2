@@ -5,13 +5,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
+
 
 
 import co.edu.Unbosque.view.*;
 
 public class Controller implements ActionListener{
-	private static File archivo = new File("data/Datos.dat");
+	private static File archivo = new File("data/datos.dat");
 	private ObjectInputStream entrada;
 	private View IG;
 	
@@ -19,7 +19,8 @@ public class Controller implements ActionListener{
 		if(!archivo.exists()) {
 			try {
 				archivo.createNewFile();
-			} catch (IOException e) {	
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}else {
@@ -32,12 +33,12 @@ public class Controller implements ActionListener{
 						entrada=new ObjectInputStream(new FileInputStream(archivo));
 						
 						
-						
+						//pr= (ArrayList<CongeladoPorAgua>) entrada.readObject();
 						
 					} catch (IOException e) {
+						// TODO Auto-generated catch block
 						
-						
-					}
+					} 
 			}
 		}
 		IG = new View(this);
