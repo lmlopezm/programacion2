@@ -23,6 +23,7 @@ public class PanelAgregar extends JPanel {
 	private JLabel lMensaje;
 	private JLabel lNombre;
 	private JLabel lApellido;
+	private JLabel lCedula;
 	private JLabel lGenero;
 	private JLabel lTel;
 	private JLabel lCorreo;
@@ -33,6 +34,7 @@ public class PanelAgregar extends JPanel {
 
 	private JTextField tNombre;
 	private JTextField tApellido;
+	private JTextField tCedula;
 	private JTextField tGenero;
 	private JTextField tTel;
 	private JTextField tCorreo;
@@ -54,32 +56,44 @@ public class PanelAgregar extends JPanel {
 		lMensaje = new JLabel("Agregar nuevo personal");
 		lMensaje.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lMensaje.setForeground(Color.WHITE);
-		lMensaje.setBounds(15, 0, 400, 50);
+		lMensaje.setBounds(100, -20, 400, 50);
 		add(lMensaje);
 
 		lNombre = new JLabel("Nombre: ");
 		lNombre.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lNombre.setForeground(Color.WHITE);
-		lNombre.setBounds(50, 50, 150, 20);
+		lNombre.setBounds(50, 26, 150, 20);
 		add(lNombre);
 
 		tNombre = new JTextField();
 		tNombre.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tNombre.setForeground(Color.BLACK);
-		tNombre.setBounds(170, 50, 180, 20);
+		tNombre.setBounds(170, 26, 180, 20);
 		add(tNombre);
 
 		lApellido = new JLabel("Apellido: ");
 		lApellido.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lApellido.setForeground(Color.WHITE);
-		lApellido.setBounds(50, 75, 150, 20);
+		lApellido.setBounds(50, 50, 150, 20);
 		add(lApellido);
 
 		tApellido = new JTextField();
 		tApellido.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tApellido.setForeground(Color.BLACK);
-		tApellido.setBounds(170, 75, 180, 20);
+		tApellido.setBounds(170, 50, 180, 20);
 		add(tApellido);
+
+		lCedula = new JLabel("Cedula: ");
+		lCedula.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lCedula.setForeground(Color.WHITE);
+		lCedula.setBounds(50, 75, 150, 20);
+		add(lCedula);
+
+		tCedula = new JTextField();
+		tCedula.setFont(new Font("Tahoma", Font.BOLD, 18));
+		tCedula.setForeground(Color.BLACK);
+		tCedula.setBounds(170, 75, 180, 20);
+		add(tCedula);
 
 		lGenero = new JLabel("Género: ");
 		lGenero.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -193,7 +207,7 @@ public class PanelAgregar extends JPanel {
 		add(bVolver);
 
 		bVolver.setActionCommand(VOLVER);
-		
+
 		lblMakoa = new JLabel("Makoa \u2122");
 		lblMakoa.setFont(new Font("Monospaced", Font.BOLD, 11));
 		lblMakoa.setBounds(298, 11, 52, 14);
@@ -397,4 +411,21 @@ public class PanelAgregar extends JPanel {
 	public static String getVolver() {
 		return VOLVER;
 	}
+
+	public JLabel getlCedula() {
+		return lCedula;
+	}
+
+	public void setlCedula(JLabel lCedula) {
+		this.lCedula = lCedula;
+	}
+
+	public JTextField gettCedula() {
+		return tCedula;
+	}
+
+	public void settCedula(JTextField tCedula) {
+		this.tCedula = tCedula;
+	}
+
 }
