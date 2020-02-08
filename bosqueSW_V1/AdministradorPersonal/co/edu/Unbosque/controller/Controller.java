@@ -19,8 +19,25 @@ public class Controller implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		if (e.getActionCommand().equals(PanelAgregar.VOLVER)) {
-			
+		IG.getPanAgregar();
+		IG.getPanBienvenido();
+		IG.getPanModificar();
+		
+		if (e.getActionCommand().equals("Volver")) {
+			IG.getPanBienvenido().setVisible(true);
+			IG.getPanAgregar().setVisible(false);
+		}
+		if (e.getActionCommand().equals("Agregar")) {
+			IG.getPanBienvenido().setVisible(false);
+			IG.getPanAgregar().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Buscar")) {
+			IG.getPanBienvenido().setVisible(false);
+			IG.getPanModificar().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Volver2")) {
+			IG.getPanModificar().setVisible(false);
+			IG.getPanBienvenido().setVisible(true);
 		}
 		
 		

@@ -48,11 +48,25 @@ public class View extends JFrame{
 		panAgregar = new PanelAgregar();
 		panAgregar.setBounds(0, 100, 400, 500);
 		add(panAgregar);
-		panAgregar.setVisible(false);
+		panAgregar.setVisible(true);
 		
 		panModificar = new PanelModificar();
 		panModificar.setBounds(0, 100, 400, 500);
 		add(panModificar);
+		panModificar.setVisible(false);
+		
+		panBienvenido.getbAgregar().addActionListener(controlador);
+		panBienvenido.getbBuscar().addActionListener(controlador);
+		
+		panAgregar.getbGuardar().addActionListener(controlador);
+		panAgregar.getbVolver().addActionListener(controlador);
+		
+		panModificar.getbModificar().addActionListener(controlador);
+		panModificar.getbVolver2().addActionListener(controlador);
+		
+		
+
+		//().addActionListener(control);
 		
 		
 	}
