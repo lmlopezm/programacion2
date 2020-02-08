@@ -200,6 +200,34 @@ public class PanelModificar extends JPanel{
 		add(tNumVentas);
 		tNumVentas.setVisible(false);
 		
+		lClientesCaptados = new JLabel("# Clientes: ");
+		lClientesCaptados.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lClientesCaptados.setForeground(Color.WHITE);
+		lClientesCaptados.setBounds(50, 300, 150, 20);
+		add(lClientesCaptados);
+		lClientesCaptados.setVisible(false);
+		
+		tCliCaptados = new JTextField();
+		tCliCaptados.setFont(new Font("Tahoma", Font.BOLD, 18));
+		tCliCaptados.setForeground(Color.BLACK);
+		tCliCaptados.setBounds(170, 300, 180, 20);
+		add(tCliCaptados);
+		tCliCaptados.setVisible(false);
+		
+		lMontoPorCliente = new JLabel("$ por Cliente: ");
+		lMontoPorCliente.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lMontoPorCliente.setForeground(Color.WHITE);
+		lMontoPorCliente.setBounds(50, 325, 150, 20);
+		add(lMontoPorCliente);
+		lMontoPorCliente.setVisible(false);
+		
+		tMontoCliente = new JTextField();
+		tMontoCliente.setFont(new Font("Tahoma", Font.BOLD, 18));
+		tMontoCliente.setForeground(Color.BLACK);
+		tMontoCliente.setBounds(170, 325, 180, 20);
+		add(tMontoCliente);
+		tMontoCliente.setVisible(false);
+		
 		bModificar = new JButton("Modificar");
 		bModificar.setFont(new Font("Tahoma", Font.BOLD, 18));
 		bModificar.setBackground(Color.GRAY);
@@ -238,10 +266,21 @@ public class PanelModificar extends JPanel{
 						Nivel.setVisible(false);
 					}
 					else {
-						cbNivel.setVisible(false);
-						Nivel.setVisible(false);
-						lNumVentas.setVisible(false);
-						tNumVentas.setVisible(false);
+						if (e.getItem() == "A comisión") {
+							cbNivel.setVisible(false);
+							Nivel.setVisible(false);
+							lNumVentas.setVisible(false);
+							tNumVentas.setVisible(false);
+							lClientesCaptados.setVisible(true);
+							tCliCaptados.setVisible(false);
+							
+						} else {
+							cbNivel.setVisible(false);
+							Nivel.setVisible(false);
+							lNumVentas.setVisible(false);
+							tNumVentas.setVisible(false);
+						}
+						
 					}
 
 				}
