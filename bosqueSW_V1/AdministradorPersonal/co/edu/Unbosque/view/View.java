@@ -43,7 +43,7 @@ public class View extends JFrame{
 		panBienvenido = new PanelBienvenida();
 		panBienvenido.setBounds(0, 100, 400, 500);
 		add(panBienvenido);
-		panBienvenido.setVisible(false);
+		panBienvenido.setVisible(true);
 		
 		panAgregar = new PanelAgregar();
 		panAgregar.setBounds(0, 100, 400, 500);
@@ -53,6 +53,21 @@ public class View extends JFrame{
 		panModificar = new PanelModificar();
 		panModificar.setBounds(0, 100, 400, 500);
 		add(panModificar);
+		panModificar.setVisible(false);
+		
+		panBienvenido.getbAgregar().addActionListener(controlador);
+		panBienvenido.getbBuscar().addActionListener(controlador);
+		
+		panAgregar.getbGuardar().addActionListener(controlador);
+		panAgregar.getbVolver().addActionListener(controlador);
+		
+		panModificar.getbModificar().addActionListener(controlador);
+		panModificar.getbVolver2().addActionListener(controlador);
+		panModificar.getbBorrar().addActionListener(controlador);
+		
+		
+
+		//().addActionListener(control);
 		
 		
 	}

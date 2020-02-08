@@ -14,6 +14,8 @@ public class PanelModificar extends JPanel{
 	public static final String MODIFICAR = "Modificar";
 	
 	public static final String VOLVER2 = "Volver2";
+	
+	public static final String BORRAR = "Borrar";
 
 	
 	private JLabel lMensaje;	
@@ -47,6 +49,7 @@ public class PanelModificar extends JPanel{
 	
 	private JButton bModificar;	
 	private JButton bVolver2;
+	private JButton bBorrar;
 
 	
 	public PanelModificar() {
@@ -54,7 +57,7 @@ public class PanelModificar extends JPanel{
 		setLayout(null);
 		setBackground(new Color(217, 21, 11));
 		
-		lMensaje = new JLabel("Agregar nuevo personal");
+		lMensaje = new JLabel("Modificar personal");
 		lMensaje.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lMensaje.setForeground(Color.WHITE);
 		lMensaje.setBounds(15, 0, 400, 50);
@@ -231,7 +234,7 @@ public class PanelModificar extends JPanel{
 		bModificar.setFont(new Font("Tahoma", Font.BOLD, 18));
 		bModificar.setBackground(Color.GRAY);
 		bModificar.setForeground(Color.WHITE);
-		bModificar.setBounds(40, 430, 150, 24);
+		bModificar.setBounds(130, 370, 150, 50);
 		add(bModificar);
 		
 		bModificar.setActionCommand(MODIFICAR);
@@ -244,6 +247,15 @@ public class PanelModificar extends JPanel{
 		add(bVolver2);
 		
 		bVolver2.setActionCommand(VOLVER2);
+		
+		bBorrar = new JButton("Borrar");
+		bBorrar.setFont(new Font("Tahoma", Font.BOLD, 18));
+		bBorrar.setBackground(Color.GRAY);
+		bBorrar.setForeground(Color.WHITE);
+		bBorrar.setBounds(40, 430, 150, 24);
+		add(bBorrar);
+		
+		bBorrar.setActionCommand(BORRAR);
 		
 		cbTipoPersonal.addItemListener(new ItemListener() {
 			
@@ -598,6 +610,21 @@ public class PanelModificar extends JPanel{
 
 	public static String getVolver2() {
 		return VOLVER2;
+	}
+
+
+	public JButton getbBorrar() {
+		return bBorrar;
+	}
+
+
+	public void setbBorrar(JButton bBorrar) {
+		this.bBorrar = bBorrar;
+	}
+
+
+	public static String getBorrar() {
+		return BORRAR;
 	}
 	
 

@@ -1,7 +1,10 @@
 package co.edu.Unbosque.Model;
 
 public class Consalariofijo extends Persona {
-	final int Sueldo_fijo = 3500000;
+	
+	private final int SUELDO_FIJO = 3500000;
+	
+	private double adicionalFijo = 0;
 
 	/**
 	 * metodo constructor <b> pre </b> que los atributos ya esten creados <b> post
@@ -30,13 +33,32 @@ public class Consalariofijo extends Persona {
 	 * @return Sueldo_fijo
 	 */
 	public int getSueldo_fijo() {
-		return Sueldo_fijo;
+		return SUELDO_FIJO;
 	}
+	
+	
 
 	@Override
 	int Calcular_salario() {
-		// TODO Auto-generated method stub
-		return 0;
+		if(getAnioIngreso()<2) {
+			return SUELDO_FIJO;
+		}
+		if (getAnioIngreso()<3) {
+			int cincoPorciento = (int) (SUELDO_FIJO*0.05);
+			return SUELDO_FIJO+cincoPorciento;
+		}
+		if (getAnioIngreso()<7) {
+			int diezPorCiento = (int) (SUELDO_FIJO*0.1);
+			return SUELDO_FIJO+diezPorCiento;
+		}
+		if (getAnioIngreso()<15) {
+			int quincePorCiento = (int) (SUELDO_FIJO*0.15);
+			return SUELDO_FIJO+quincePorCiento;
+		}
+		else {
+			return 0;
+		}
+		
 	}
 
 	@Override
