@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import co.edu.Unbosque.Model.Concomision;
+import co.edu.Unbosque.Model.Ingjunior;
+import co.edu.Unbosque.Model.Ingsenior;
 import co.edu.Unbosque.Model.Persona;
 import co.edu.Unbosque.view.View;
 
@@ -96,6 +98,53 @@ public class Controller implements ActionListener {
 //		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
 		Concomision nuevo = new Concomision(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion,
 				0, 0);
+		if (buscarPersona(cedula) == null) {
+			personas.add(nuevo);
+			JOptionPane.showMessageDialog(null, "El empleado con: " + cedula + " ha sido agregado", "Oficias el Bosque",
+					JOptionPane.INFORMATION_MESSAGE);
+			escribirEnArchivo(nuevo);
+			return true;
+		} else {
+			JOptionPane.showMessageDialog(null, "El empleado: " + cedula + " ya se encuentra agregado",
+					"Venta Producto TecnoShop", JOptionPane.WARNING_MESSAGE);
+			return false;
+		}
+
+	}
+
+	public boolean agregarJunior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
+			String telefono, String correo, String direccion, int nivel) {
+
+		// IG.getPanAgregar().gettCedula().getText(),
+//		IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
+//		Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+//		IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+//		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
+		Ingjunior nuevo = new Ingjunior(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion,
+				nivel);
+		if (buscarPersona(cedula) == null) {
+			personas.add(nuevo);
+			JOptionPane.showMessageDialog(null, "El empleado con: " + cedula + " ha sido agregado", "Oficias el Bosque",
+					JOptionPane.INFORMATION_MESSAGE);
+			escribirEnArchivo(nuevo);
+			return true;
+		} else {
+			JOptionPane.showMessageDialog(null, "El empleado: " + cedula + " ya se encuentra agregado",
+					"Venta Producto TecnoShop", JOptionPane.WARNING_MESSAGE);
+			return false;
+		}
+
+	}
+
+	public boolean agregarSenior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
+			String telefono, String correo, String direccion, int Clientes, int ComisionxCliente) {
+
+		// IG.getPanAgregar().gettCedula().getText(),
+//		IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
+//		Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+//		IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+//		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
+		Ingsenior nuevo = new Ingsenior(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion, 0);
 		if (buscarPersona(cedula) == null) {
 			personas.add(nuevo);
 			JOptionPane.showMessageDialog(null, "El empleado con: " + cedula + " ha sido agregado", "Oficias el Bosque",
