@@ -1,62 +1,114 @@
 package co.edu.Unbosque.controller;
 
 import java.awt.event.*;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
+import java.util.*;
 
-
-
+import co.edu.Unbosque.Model.Persona;
 import co.edu.Unbosque.view.*;
 
-public class Controller implements ActionListener{
-	private static File archivo = new File("data/datos.dat");
-	private ObjectInputStream entrada;
+public class Controller implements ActionListener {
+
 	private View IG;
-	
+	private ArrayList<Persona> personas;
+	private ObjectInputStream entrada;
+	private ObjectOutput salida;
+	private File archivo = new File("data/datos.dat");
+
 	public Controller() {
-		if(!archivo.exists()) {
-			try {
-				archivo.createNewFile();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}else {
-			
-		
-			if(archivo.length()!=0){
-				
-					try {
-						
-						entrada=new ObjectInputStream(new FileInputStream(archivo));
-						
-						
-						//pr= (ArrayList<CongeladoPorAgua>) entrada.readObject();
-						
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						
-					} 
-			}
-		}
+
 		IG = new View(this);
-		
 		IG.setVisible(true);
-	
+
+		personas = new ArrayList<Persona>();
+
+//		if (archivo.exists()) {
+//			System.out.println("El archivo ya existe");
+//		} else {
+//			try {
+//				archivo.createNewFile();
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//		}
+//
+//		if (archivo.length() != 0) {
+//			try {
+//				entrada = new ObjectInputStream(new FileInputStream(archivo));
+//				personas = (ArrayList<Persona>) entrada.readObject();
+//			} catch (ClassNotFoundException | IOException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+//		}
+
 	}
+
+	/**
+	 * Metodo que al pasarle por parametro un objeto persona lo escribe en el
+	 * archivo
+	 * 
+	 * @param persona
+	 */
+	public void escribirEnArchivo(Persona persona) {
+		try {
+			salida = new ObjectOutputStream(new FileOutputStream(archivo));
+			salida.writeObject(personas);
+			salida.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+//	public boolean agregarPersona(String cedula, String nombre, String apellido, int anioIngreso, String genero,
+//			String telefono, String correo, String direccion) {
+//
+////		Persona nuevo =new Persona(cedula,nombre,apellido,anioIngreso,genero,telefono,correo,direccion);
+//			
+//			
+//		
+//	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
 		
-		if (e.getActionCommand().equals(PanelAgregar.VOLVER)) {
-			
+		IG.getPanAgregar();
+		IG.getPanBienvenido();
+		IG.getPanModificar();
+		
+		if (e.getActionCommand().equals("Volver")) {
+			IG.getPanBienvenido().setVisible(true);
+			IG.getPanAgregar().setVisible(false);
+		}
+		if (e.getActionCommand().equals("Agregar")) {
+			IG.getPanBienvenido().setVisible(false);
+			IG.getPanAgregar().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Buscar")) {
+			IG.getPanBienvenido().setVisible(false);
+			IG.getPanModificar().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Volver2")) {
+			IG.getPanModificar().setVisible(false);
+			IG.getPanBienvenido().setVisible(true);
+		}
+		if (e.getActionCommand().equals("Borrar")) {
+			System.out.println("Borrando...");
+		}
+		if (e.getActionCommand().equals("Guardar")) {
+			//Senior
+//			Persona nuevo = new Persona(IG.getPanAgregar().get, IG.getPanAgregar().gettNombre(), null, 0, null, null, null, null) {
+//				Persona nuevaPersona = new Perso
+////				int Calcular_salario() {
+////					int i = 0;
+////					return i;
+////				}
+////			};
+			IG.getPanAgregar().gettNombre();
 		}
 		
-		
 	}
-	
-	
 
 }
