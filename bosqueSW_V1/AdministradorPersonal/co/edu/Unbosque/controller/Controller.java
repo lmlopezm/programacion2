@@ -67,6 +67,15 @@ public class Controller implements ActionListener {
 
 	}
 
+//	public boolean agregarPersona(String cedula, String nombre, String apellido, int anioIngreso, String genero,
+//			String telefono, String correo, String direccion) {
+//
+////		Persona nuevo =new Persona(cedula,nombre,apellido,anioIngreso,genero,telefono,correo,direccion);
+//			
+//			
+//		
+//	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
