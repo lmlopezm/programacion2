@@ -61,10 +61,10 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * Metodo que al pasarle por parametro un objeto persona lo escribe en el
-	 * archivo
-	 * 
-	 * @param persona
+	 * Metodo agregar una persona en el archivo 
+	 * <b> pre </b> El arreglo personas ya esta creado.
+	 * <b> post </b> Se ha agregado un nuevo objeto y se ha agregado al arreglo.
+	 * @param persona persona != null. persona != "".
 	 */
 	public void escribirEnArchivo() {
 		try {
@@ -133,6 +133,20 @@ public class Controller implements ActionListener {
 				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Uno")) {
 					niv = 1;
 				}
+				/**
+				 * metodo agregar
+				 * <b> pre </b> que existan los parametros
+				 * <b> post </b> agregar un usuario
+				 * @param cedula es la cedula del usuario. cedula!=null, cedula!=""
+				 * @param nombre es el nombre del usuario. nombre!="", nombre!=""
+				 * @param apellido es el apellido del usuario. apellido!=null, apellido!=""
+				 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null, anioIngreso!=""
+				 * @param genero es el genero del usuario. genero!="", genero!=null
+				 * @param telefono es el telefono. telefono!="", telefono!=null
+				 * @param correo es el correo del usuario. correo!="", correo!=""
+				 * @param direccion es la direccion del usuario. direccion!="", direccion!=null
+				 * @param nivel es el nivel del usuario. nivel!="", nivel!=null
+				 */
 				juniors.add(new Ingjunior(	cedula,
 											IG.getPanAgregar().gettNombre().getText(),
 											IG.getPanAgregar().gettApellido().getText(), 
