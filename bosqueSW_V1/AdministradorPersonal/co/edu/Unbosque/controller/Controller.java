@@ -2,14 +2,19 @@ package co.edu.Unbosque.controller;
 
 import java.awt.event.*;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
+import java.util.ArrayList;
 
+import co.edu.Unbosque.Model.Persona;
 import co.edu.Unbosque.view.*;
 
 public class Controller implements ActionListener {
 
 	private View IG;
+	private ArrayList<Persona> personas;
 	private ObjectInputStream entrada;
 	private ObjectOutput salida;
 	private File archivo = new File("data/datos.dat");
@@ -17,8 +22,29 @@ public class Controller implements ActionListener {
 	public Controller() {
 
 		IG = new View(this);
-
 		IG.setVisible(true);
+
+		personas = new ArrayList<Persona>();
+
+		if (archivo.exists()) {
+			System.out.println("El archivo ya existe");
+		} else {
+			try {
+				archivo.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+		if (archivo.length() != 0) {
+			try {
+				entrada = new ObjectInputStream(new FileInputStream(archivo));
+				personas = (ArrayList<Persona>) entrada.readObject();
+			} catch (ClassNotFoundException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 	}
 
