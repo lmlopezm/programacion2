@@ -27,6 +27,7 @@ public class PanelModificar extends JPanel{
 	private JLabel tipoPersonal;	
 	private JLabel Nivel;
 	private JLabel lSueldo;
+	private JLabel lNumVentas;
 	
 	private JTextField tNombre;	
 	private JTextField tApellido;	
@@ -34,7 +35,8 @@ public class PanelModificar extends JPanel{
 	private JTextField tTel;	
 	private JTextField tCorreo;	
 	private JTextField tDireccion;	
-	private JTextField tAnioIngreso;	
+	private JTextField tAnioIngreso;
+	private JTextField tNumVentas;
 	
 	private JComboBox<String> cbNivel;
 	private JComboBox<String> cbTipoPersonal;
@@ -138,19 +140,23 @@ public class PanelModificar extends JPanel{
 		tAnioIngreso.setBounds(170, 200, 180, 20);
 		add(tAnioIngreso);
 		
+		lSueldo = new JLabel("Sueldo: 00000");
+		lSueldo.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lSueldo.setForeground(Color.WHITE);
+		lSueldo.setBounds(130, 235, 150, 20);
+		add(lSueldo);
+		
 		tipoPersonal = new JLabel("Empleado: ");
 		tipoPersonal.setFont(new Font("Tahoma", Font.BOLD, 18));
 		tipoPersonal.setForeground(Color.WHITE);
-		tipoPersonal.setBounds(50, 225, 150, 20);
+		tipoPersonal.setBounds(50, 275, 150, 20);
 		add(tipoPersonal);
 		
 		cbTipoPersonal = new JComboBox<String>();
 		cbTipoPersonal.setFont(new Font("Tahoma", Font.BOLD, 18));
 		cbTipoPersonal.setForeground(Color.BLACK);
-		cbTipoPersonal.setBounds(170, 225, 180, 20);
-		
-		
-		
+		cbTipoPersonal.setBounds(170, 275, 180, 20);		
+		cbTipoPersonal.addItem(" ");
 		cbTipoPersonal.addItem("Ingeniero Senior");
 		cbTipoPersonal.addItem("Ingeniero Junior");
 		cbTipoPersonal.addItem("A comisión");		
@@ -159,14 +165,14 @@ public class PanelModificar extends JPanel{
 		Nivel = new JLabel("Nivel: ");
 		Nivel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		Nivel.setForeground(Color.WHITE);
-		Nivel.setBounds(50, 250, 150, 20);
+		Nivel.setBounds(50, 300, 150, 20);
 		add(Nivel);
 		Nivel.setVisible(false);
 		
 		cbNivel = new JComboBox<String>();
 		cbNivel.setFont(new Font("Tahoma", Font.BOLD, 18));
 		cbNivel.setForeground(Color.BLACK);
-		cbNivel.setBounds(170, 250, 180, 20);
+		cbNivel.setBounds(170, 300, 180, 20);
 		cbNivel.addItem("Uno");
 		cbNivel.addItem("Dos");
 		cbNivel.addItem("Tres");	
@@ -175,6 +181,20 @@ public class PanelModificar extends JPanel{
 		cbNivel.addItem("Seis");
 		add(cbNivel);
 		cbNivel.setVisible(false);
+		
+		lNumVentas = new JLabel("# Ventas: ");
+		lNumVentas.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lNumVentas.setForeground(Color.WHITE);
+		lNumVentas.setBounds(50, 300, 150, 20);
+		add(lNumVentas);
+		lNumVentas.setVisible(false);
+		
+		tNumVentas = new JTextField();
+		tNumVentas.setFont(new Font("Tahoma", Font.BOLD, 18));
+		tNumVentas.setForeground(Color.BLACK);
+		tNumVentas.setBounds(170, 300, 180, 20);
+		add(tNumVentas);
+		tNumVentas.setVisible(false);
 		
 		bModificar = new JButton("Modificar");
 		bModificar.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -203,12 +223,28 @@ public class PanelModificar extends JPanel{
 				if (e.getItem() == "Ingeniero Junior") {
 					cbNivel.setVisible(true);
 					Nivel.setVisible(true);
-				} else {
-					cbNivel.setVisible(false);
-					Nivel.setVisible(false);
+					lNumVentas.setVisible(false);
+					tNumVentas.setVisible(false);
+				} 				
+				else {					
+					if (e.getItem() == "Ingeniero Senior") {
+						lNumVentas.setVisible(true);
+						tNumVentas.setVisible(true);
+						cbNivel.setVisible(false);
+						Nivel.setVisible(false);
+					}
+					else {
+						cbNivel.setVisible(false);
+						Nivel.setVisible(false);
+						lNumVentas.setVisible(false);
+						tNumVentas.setVisible(false);
+					}
+
+				}
+					
 				}
 				
-			}
+			
 		});
 		
 	}
