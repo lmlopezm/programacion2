@@ -139,17 +139,7 @@ public class Controller implements ActionListener {
 		}
 		if (e.getActionCommand().equals("Guardar")) {
 
-//			Senior
-//			Persona nuevo = new Persona(IG.getPanAgregar().gettCedula().getText(),
-//					IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
-//					Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-//					IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-//					IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettDireccion().getText()) {
-//				int Calcular_salario() {
-//					int i = 0;
-//					return i;
-//				}
-//			};
+
 		}
 
 	}
