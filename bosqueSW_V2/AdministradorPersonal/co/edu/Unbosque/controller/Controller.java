@@ -59,10 +59,11 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * Metodo que al pasarle por parametro un objeto persona lo escribe en el
-	 * archivo
+	 * Metodo agregar una persona en el archivo <b> pre </b> El arreglo personas ya
+	 * esta creado. <b> post </b> Se ha agregado un nuevo objeto y se ha agregado al
+	 * arreglo.
 	 * 
-	 * @param persona
+	 * @param persona persona != null. persona != "".
 	 */
 	public void escribirEnArchivo() {
 		try {
@@ -130,11 +131,35 @@ public class Controller implements ActionListener {
 				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Uno")) {
 					niv = 1;
 				}
+
 				juniors.add(new Ingjunior(cedula, IG.getPanAgregar().gettNombre().getText(),
 						IG.getPanAgregar().gettApellido().getText(),
 						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
 						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
 						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettDireccion().getText(), niv));
+
+				/**
+				 * metodo agregar <b> pre </b> que existan los parametros <b> post </b> agregar
+				 * un usuario
+				 * 
+				 * @param cedula      es la cedula del usuario. cedula!=null, cedula!=""
+				 * @param nombre      es el nombre del usuario. nombre!="", nombre!=""
+				 * @param apellido    es el apellido del usuario. apellido!=null, apellido!=""
+				 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null,
+				 *                    anioIngreso!=""
+				 * @param genero      es el genero del usuario. genero!="", genero!=null
+				 * @param telefono    es el telefono. telefono!="", telefono!=null
+				 * @param correo      es el correo del usuario. correo!="", correo!=""
+				 * @param direccion   es la direccion del usuario. direccion!="",
+				 *                    direccion!=null
+				 * @param nivel       es el nivel del usuario. nivel!="", nivel!=null
+				 */
+				juniors.add(new Ingjunior(cedula, IG.getPanAgregar().gettNombre().getText(),
+						IG.getPanAgregar().gettApellido().getText(),
+						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettDireccion().getText(), niv));
+
 				System.out.println(juniors.get(0));
 				System.out.println(personas);
 				escribirEnArchivo();
@@ -145,8 +170,8 @@ public class Controller implements ActionListener {
 						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
 						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
 						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0));
-			System.out.println(seniors);
-			escribirEnArchivo();
+				System.out.println(seniors);
+				escribirEnArchivo();
 			}
 			if (IG.getPanAgregar().getCbTipoPersonal().getSelectedItem().equals("A comisión")) {
 
