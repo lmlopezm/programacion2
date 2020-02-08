@@ -46,6 +46,7 @@ public class PanelAgregar extends JPanel {
 
 	private JButton bGuardar;
 	private JButton bVolver;
+	private JLabel lblMakoa;
 
 	public PanelAgregar() {
 
@@ -81,7 +82,7 @@ public class PanelAgregar extends JPanel {
 		tApellido.setForeground(Color.BLACK);
 		tApellido.setBounds(170, 50, 180, 20);
 		add(tApellido);
-		
+
 		lCedula = new JLabel("Cedula: ");
 		lCedula.setFont(new Font("Tahoma", Font.BOLD, 18));
 		lCedula.setForeground(Color.WHITE);
@@ -206,6 +207,11 @@ public class PanelAgregar extends JPanel {
 		add(bVolver);
 
 		bVolver.setActionCommand(VOLVER);
+
+		lblMakoa = new JLabel("Makoa \u2122");
+		lblMakoa.setFont(new Font("Monospaced", Font.BOLD, 11));
+		lblMakoa.setBounds(298, 11, 52, 14);
+		add(lblMakoa);
 
 		cbTipoPersonal.addItemListener(new ItemListener() {
 
@@ -421,7 +427,5 @@ public class PanelAgregar extends JPanel {
 	public void settCedula(JTextField tCedula) {
 		this.tCedula = tCedula;
 	}
-	
-
 
 }
