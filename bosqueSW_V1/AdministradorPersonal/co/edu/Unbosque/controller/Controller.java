@@ -91,11 +91,6 @@ public class Controller implements ActionListener {
 	public boolean agregarComision(String cedula, String nombre, String apellido, int anioIngreso, String genero,
 			String telefono, String correo, String direccion, int Clientes, int ComisionxCliente) {
 
-		// IG.getPanAgregar().gettCedula().getText(),
-//		IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
-//		Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-//		IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-//		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
 		Concomision nuevo = new Concomision(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion,
 				0, 0);
 		if (buscarPersona(cedula) == null) {
@@ -114,12 +109,6 @@ public class Controller implements ActionListener {
 
 	public boolean agregarJunior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
 			String telefono, String correo, String direccion, int nivel) {
-
-		// IG.getPanAgregar().gettCedula().getText(),
-//		IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
-//		Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-//		IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-//		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
 		Ingjunior nuevo = new Ingjunior(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion,
 				nivel);
 		if (buscarPersona(cedula) == null) {
@@ -137,13 +126,8 @@ public class Controller implements ActionListener {
 	}
 
 	public boolean agregarSenior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
-			String telefono, String correo, String direccion, int Clientes, int ComisionxCliente) {
+			String telefono, String correo, String direccion, int numVentas) {
 
-		// IG.getPanAgregar().gettCedula().getText(),
-//		IG.getPanAgregar().gettNombre().getText(), IG.getPanAgregar().gettApellido().getText(),
-//		Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-//		IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-//		IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0
 		Ingsenior nuevo = new Ingsenior(cedula, nombre, apellido, anioIngreso, genero, telefono, correo, direccion, 0);
 		if (buscarPersona(cedula) == null) {
 			personas.add(nuevo);
@@ -184,6 +168,37 @@ public class Controller implements ActionListener {
 		return encontrado;
 	}
 
+	/**
+	 * Metodo que hace uso de del metodo buscarPersona y elimina al empleado
+	 * encontrado del arreglo y del File
+	 * 
+	 * @param cedula
+	 * @return
+	 */
+	public boolean eliminarPersona(String cedula) {
+		Persona eliminado = buscarPersona(cedula);
+
+		if (eliminado != null) {
+			personas.remove(eliminado);
+			JOptionPane.showMessageDialog(null, "El empleado con Cedula: " + cedula + " ha sido eliminado",
+					"Oficinas el Bosque", JOptionPane.INFORMATION_MESSAGE);
+			archivo.delete();
+			try {
+				archivo.createNewFile();
+				for (int i = 0; i < personas.size(); i++) {
+					escribirEnArchivo(personas.get(i));
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			return true;
+		}
+		JOptionPane.showMessageDialog(null, "El empleado con Cedula: " + cedula + " no esta en la base de datos",
+				"Oficinas el Bosque", JOptionPane.INFORMATION_MESSAGE);
+		return false;
+	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
@@ -199,19 +214,55 @@ public class Controller implements ActionListener {
 			IG.getPanBienvenido().setVisible(false);
 			IG.getPanAgregar().setVisible(true);
 		}
+
 		if (e.getActionCommand().equals("Buscar")) {
-			IG.getPanBienvenido().setVisible(false);
-			IG.getPanModificar().setVisible(true);
+			if (IG.getPanBienvenido().gettBuscar().getText() != "") {
+				IG.getPanBienvenido().setVisible(false);
+				IG.getPanModificar().setVisible(true);
+			} else {
+				JOptionPane.showMessageDialog(null, "Porfavor ingrese la cedula del empleado");
+			}
 		}
+		// IG.getPanBienvenido().gettBuscar().getText() != ""
+
 		if (e.getActionCommand().equals("Volver2")) {
 			IG.getPanModificar().setVisible(false);
 			IG.getPanBienvenido().setVisible(true);
 		}
 		if (e.getActionCommand().equals("Borrar")) {
+
 			System.out.println("Borrando...");
 		}
 		if (e.getActionCommand().equals("Guardar")) {
-
+			if (IG.getPanAgregar().getCbTipoPersonal().equals("Ingeniero Junior")) {
+				agregarJunior(IG.getPanAgregar().gettCedula().getText(), IG.getPanAgregar().gettNombre().getText(),
+						IG.getPanAgregar().gettApellido().getText(),
+						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(),
+						Integer.parseInt(IG.getPanAgregar().getNivel().getText()));
+				System.out.println("Se agrego ing Junior");
+				IG.getPanBienvenido().setVisible(true);
+				IG.getPanAgregar().setVisible(false);
+			} else if (IG.getPanAgregar().getCbTipoPersonal().equals("Ingeniero Senior")) {
+				agregarSenior(IG.getPanAgregar().gettCedula().getText(), IG.getPanAgregar().gettNombre().getText(),
+						IG.getPanAgregar().gettApellido().getText(),
+						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0);
+				System.out.println("Se agrego ing Senior");
+				IG.getPanBienvenido().setVisible(true);
+				IG.getPanAgregar().setVisible(false);
+			} else if (IG.getPanAgregar().getCbTipoPersonal().equals("A comisión")) {
+				agregarComision(IG.getPanAgregar().gettCedula().getText(), IG.getPanAgregar().gettNombre().getText(),
+						IG.getPanAgregar().gettApellido().getText(),
+						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0, 0);
+				System.out.println("Se agrego a Comision");
+				IG.getPanBienvenido().setVisible(true);
+				IG.getPanAgregar().setVisible(false);
+			}
 		}
 
 	}
