@@ -180,7 +180,7 @@ public class PanelModificar extends JPanel{
 		bModificar.setFont(new Font("Tahoma", Font.BOLD, 18));
 		bModificar.setBackground(Color.GRAY);
 		bModificar.setForeground(Color.WHITE);
-		bModificar.setBounds(50, 300, 180, 50);
+		bModificar.setBounds(40, 430, 150, 24);
 		add(bModificar);
 		
 		bModificar.setActionCommand(MODIFICAR);
@@ -189,7 +189,7 @@ public class PanelModificar extends JPanel{
 		bVolver2.setFont(new Font("Tahoma", Font.BOLD, 18));
 		bVolver2.setBackground(Color.GRAY);
 		bVolver2.setForeground(Color.WHITE);
-		bVolver2.setBounds(220, 430, 150, 24);
+		bVolver2.setBounds(210, 430, 150, 24);
 		add(bVolver2);
 		
 		bVolver2.setActionCommand(VOLVER2);
