@@ -100,6 +100,7 @@ public class Controller implements ActionListener {
 			personas.add(nuevo);
 			JOptionPane.showMessageDialog(null, "El empleado con: " + cedula + " ha sido agregado", "Oficias el Bosque",
 					JOptionPane.INFORMATION_MESSAGE);
+			escribirEnArchivo(nuevo);
 			return true;
 		} else {
 			JOptionPane.showMessageDialog(null, "El empleado: " + cedula + " ya se encuentra agregado",
