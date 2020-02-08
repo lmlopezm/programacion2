@@ -55,8 +55,6 @@ public class Controller implements ActionListener {
 				e.printStackTrace();
 			}
 		}
-		
-		
 
 	}
 
@@ -69,7 +67,7 @@ public class Controller implements ActionListener {
 	public void escribirEnArchivo() {
 		try {
 			salida = new ObjectOutputStream(new FileOutputStream(archivo));
-			//salida.writeObject(personas);
+			// salida.writeObject(personas);
 			salida.writeObject(juniors.toString());
 			salida.close();
 		} catch (IOException e) {
@@ -90,13 +88,12 @@ public class Controller implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		
 		IG.getPanAgregar();
 		IG.getPanBienvenido();
 		IG.getPanModificar();
-		
+
 		String cedula = "";
-		
+
 		if (e.getActionCommand().equals("Volver")) {
 			IG.getPanBienvenido().setVisible(true);
 			IG.getPanAgregar().setVisible(false);
@@ -104,7 +101,7 @@ public class Controller implements ActionListener {
 		if (e.getActionCommand().equals("Agregar")) {
 			if (IG.getPanBienvenido().gettBuscar().getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "Ingrese cédula");
-			}else {
+			} else {
 				IG.getPanBienvenido().setVisible(false);
 				IG.getPanAgregar().setVisible(true);
 				cedula = IG.getPanBienvenido().gettBuscar().getText();
@@ -114,11 +111,11 @@ public class Controller implements ActionListener {
 		if (e.getActionCommand().equals("Buscar")) {
 			if (IG.getPanBienvenido().gettBuscar().getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "Ingrese cédula");
-			}else {
+			} else {
 				IG.getPanBienvenido().setVisible(false);
 				IG.getPanModificar().setVisible(true);
 			}
-			
+
 		}
 		if (e.getActionCommand().equals("Volver2")) {
 			IG.getPanModificar().setVisible(false);
@@ -133,28 +130,30 @@ public class Controller implements ActionListener {
 				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Uno")) {
 					niv = 1;
 				}
-				juniors.add(new Ingjunior(	cedula,
-											IG.getPanAgregar().gettNombre().getText(),
-											IG.getPanAgregar().gettApellido().getText(), 
-											Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-											IG.getPanAgregar().gettGenero().getText(),
-											IG.getPanAgregar().gettTel().getText(), 
-											IG.getPanAgregar().gettCorreo().getText(), 
-											IG.getPanAgregar().gettDireccion().getText(),
-											niv
-											));
+				juniors.add(new Ingjunior(cedula, IG.getPanAgregar().gettNombre().getText(),
+						IG.getPanAgregar().gettApellido().getText(),
+						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettDireccion().getText(), niv));
 				System.out.println(juniors.get(0));
+				System.out.println(personas);
 				escribirEnArchivo();
 			}
 			if (IG.getPanAgregar().getCbTipoPersonal().getSelectedItem().equals("Ingeniero Senior")) {
-				
+				seniors.add(new Ingsenior(cedula, IG.getPanAgregar().gettNombre().getText(),
+						IG.getPanAgregar().gettApellido().getText(),
+						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
+						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), 0));
+			System.out.println(seniors);
+			escribirEnArchivo();
 			}
 			if (IG.getPanAgregar().getCbTipoPersonal().getSelectedItem().equals("A comisión")) {
-				
+
 			}
-			
+
 		}
-		
+
 	}
 
 }

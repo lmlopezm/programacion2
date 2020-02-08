@@ -56,9 +56,10 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * Metodo agregar una persona en el archivo 
-	 * <b> pre </b> El arreglo personas ya esta creado.
-	 * <b> post </b> Se ha agregado un nuevo objeto y se ha agregado al arreglo.
+	 * Metodo agregar una persona en el archivo <b> pre </b> El arreglo personas ya
+	 * esta creado. <b> post </b> Se ha agregado un nuevo objeto y se ha agregado al
+	 * arreglo.
+	 * 
 	 * @param persona persona != null. persona != "".
 	 */
 	public void escribirEnArchivo(Persona persona) {
@@ -73,19 +74,24 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * metodo agregar
-	 * <b> pre </b> que existan los parametros
-	 * <b> post </b> agregar un usuario
-	 * @param cedula es la cedula del usuario. cedula!=null, cedula!=""
-	 * @param nombre es el nombre del usuario. nombre!="", nombre!=""
-	 * @param apellido es el apellido del usuario. apellido!=null, apellido!=""
-	 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null, anioIngreso!=""
-	 * @param genero es el genero del usuario. genero!="", genero!=null
-	 * @param telefono es el telefono. telefono!="", telefono!=null
-	 * @param correo es el correo del usuario. correo!="", correo!=""
-	 * @param direccion es la direccion del usuario. direccion!="", direccion!=null
-	 * @param Clientes es el nClientes del usuario. Clientes!="", Clientes!=null
-	 * @param ComisionxCliente es la ComisionxCliente del usuario. ComisionxCliente!="", ComisionxCliente!=null
+	 * metodo agregar <b> pre </b> que existan los parametros <b> post </b> agregar
+	 * un usuario
+	 * 
+	 * @param cedula           es la cedula del usuario. cedula!=null, cedula!=""
+	 * @param nombre           es el nombre del usuario. nombre!="", nombre!=""
+	 * @param apellido         es el apellido del usuario. apellido!=null,
+	 *                         apellido!=""
+	 * @param anioIngreso      es el anioIngreso del usuario. anioIngreso!=null,
+	 *                         anioIngreso!=""
+	 * @param genero           es el genero del usuario. genero!="", genero!=null
+	 * @param telefono         es el telefono. telefono!="", telefono!=null
+	 * @param correo           es el correo del usuario. correo!="", correo!=""
+	 * @param direccion        es la direccion del usuario. direccion!="",
+	 *                         direccion!=null
+	 * @param Clientes         es el nClientes del usuario. Clientes!="",
+	 *                         Clientes!=null
+	 * @param ComisionxCliente es la ComisionxCliente del usuario.
+	 *                         ComisionxCliente!="", ComisionxCliente!=null
 	 * @return
 	 */
 	public boolean agregarComision(String cedula, String nombre, String apellido, int anioIngreso, String genero,
@@ -106,19 +112,22 @@ public class Controller implements ActionListener {
 		}
 
 	}
+
 	/**
-	 * metodo agregar
-	 * <b> pre </b> que existan los parametros
-	 * <b> post </b> agregar un usuario
-	 * @param cedula es la cedula del usuario. cedula!=null, cedula!=""
-	 * @param nombre es el nombre del usuario. nombre!="", nombre!=""
-	 * @param apellido es el apellido del usuario. apellido!=null, apellido!=""
-	 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null, anioIngreso!=""
-	 * @param genero es el genero del usuario. genero!="", genero!=null
-	 * @param telefono es el telefono. telefono!="", telefono!=null
-	 * @param correo es el correo del usuario. correo!="", correo!=""
-	 * @param direccion es la direccion del usuario. direccion!="", direccion!=null
-	 * @param nivel es el nivel del usuario. nivel!="", nivel!=null
+	 * metodo agregar <b> pre </b> que existan los parametros <b> post </b> agregar
+	 * un usuario
+	 * 
+	 * @param cedula      es la cedula del usuario. cedula!=null, cedula!=""
+	 * @param nombre      es el nombre del usuario. nombre!="", nombre!=""
+	 * @param apellido    es el apellido del usuario. apellido!=null, apellido!=""
+	 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null,
+	 *                    anioIngreso!=""
+	 * @param genero      es el genero del usuario. genero!="", genero!=null
+	 * @param telefono    es el telefono. telefono!="", telefono!=null
+	 * @param correo      es el correo del usuario. correo!="", correo!=""
+	 * @param direccion   es la direccion del usuario. direccion!="",
+	 *                    direccion!=null
+	 * @param nivel       es el nivel del usuario. nivel!="", nivel!=null
 	 * @return
 	 */
 	public boolean agregarJunior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
@@ -138,20 +147,26 @@ public class Controller implements ActionListener {
 		}
 
 	}
+
 	/**
-	 * metodo agregar
-	 * <b> pre </b> que existan los parametros
-	 * <b> post </b> agregar un usuario
-	 * @param cedula es la cedula del usuario. cedula!=null, cedula!=""
-	 * @param nombre es el nombre del usuario. nombre!="", nombre!=""
-	 * @param apellido es el apellido del usuario. apellido!=null, apellido!=""
-	 * @param anioIngreso es el anioIngreso del usuario. anioIngreso!=null, anioIngreso!=""
-	 * @param genero es el genero del usuario. genero!="", genero!=null
-	 * @param telefono es el telefono. telefono!="", telefono!=null
-	 * @param correo es el correo del usuario. correo!="", correo!=""
-	 * @param direccion es la direccion del usuario. direccion!="", direccion!=null
-	 * @param Clientes es el nClientes del usuario. Clientes!="", Clientes!=null
-	 * @param ComisionxCliente es el ComisionxCliente del usuario. ComisionxCliente!="", ComisionxCliente!=null
+	 * metodo agregar <b> pre </b> que existan los parametros <b> post </b> agregar
+	 * un usuario
+	 * 
+	 * @param cedula           es la cedula del usuario. cedula!=null, cedula!=""
+	 * @param nombre           es el nombre del usuario. nombre!="", nombre!=""
+	 * @param apellido         es el apellido del usuario. apellido!=null,
+	 *                         apellido!=""
+	 * @param anioIngreso      es el anioIngreso del usuario. anioIngreso!=null,
+	 *                         anioIngreso!=""
+	 * @param genero           es el genero del usuario. genero!="", genero!=null
+	 * @param telefono         es el telefono. telefono!="", telefono!=null
+	 * @param correo           es el correo del usuario. correo!="", correo!=""
+	 * @param direccion        es la direccion del usuario. direccion!="",
+	 *                         direccion!=null
+	 * @param Clientes         es el nClientes del usuario. Clientes!="",
+	 *                         Clientes!=null
+	 * @param ComisionxCliente es el ComisionxCliente del usuario.
+	 *                         ComisionxCliente!="", ComisionxCliente!=null
 	 * @return
 	 */
 	public boolean agregarSenior(String cedula, String nombre, String apellido, int anioIngreso, String genero,
@@ -173,9 +188,9 @@ public class Controller implements ActionListener {
 	}
 
 	/**
-	 * metodo buscar usuario
-	 * <b> pre </b> que existan los parametros
-	 * <b> post </b> buscar un usuario
+	 * metodo buscar usuario <b> pre </b> que existan los parametros <b> post </b>
+	 * buscar un usuario
+	 * 
 	 * @param cedula es la cedula del usuario. cedula!="", cedula!=null
 	 * @return encontrado
 	 */
@@ -263,16 +278,28 @@ public class Controller implements ActionListener {
 			System.out.println("Borrando...");
 		}
 		if (e.getActionCommand().equals("Guardar")) {
-			if (IG.getPanAgregar().getCbTipoPersonal().equals("Ingeniero Junior")) {
+			if (IG.getPanAgregar().getCbTipoPersonal().getSelectedItem().equals("Ingeniero Junior")) {
+				int niv = 0;
+				if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Uno")) {
+					niv = 1;
+				} else if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Dos")) {
+					niv = 2;
+				} else if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Tres")) {
+					niv = 3;
+				} else if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Cuatro")) {
+					niv = 4;
+				} else if (IG.getPanAgregar().getCbNivel().getSelectedItem().equals("Cinco")) {
+					niv = 5;
+				}
 				agregarJunior(IG.getPanAgregar().gettCedula().getText(), IG.getPanAgregar().gettNombre().getText(),
 						IG.getPanAgregar().gettApellido().getText(),
 						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
 						IG.getPanAgregar().gettGenero().getText(), IG.getPanAgregar().gettTel().getText(),
-						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(),
-						Integer.parseInt(IG.getPanAgregar().getNivel().getText()));
+						IG.getPanAgregar().gettCorreo().getText(), IG.getPanAgregar().gettCorreo().getText(), niv);
 				System.out.println("Se agrego ing Junior");
 				IG.getPanBienvenido().setVisible(true);
 				IG.getPanAgregar().setVisible(false);
+				System.out.println(personas);
 			} else if (IG.getPanAgregar().getCbTipoPersonal().equals("Ingeniero Senior")) {
 				agregarSenior(IG.getPanAgregar().gettCedula().getText(), IG.getPanAgregar().gettNombre().getText(),
 						IG.getPanAgregar().gettApellido().getText(),
