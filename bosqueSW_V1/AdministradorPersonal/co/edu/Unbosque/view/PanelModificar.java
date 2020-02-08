@@ -28,6 +28,8 @@ public class PanelModificar extends JPanel{
 	private JLabel Nivel;
 	private JLabel lSueldo;
 	private JLabel lNumVentas;
+	private JLabel lClientesCaptados;
+	private JLabel lMontoPorCliente;
 	
 	private JTextField tNombre;	
 	private JTextField tApellido;	
@@ -37,6 +39,8 @@ public class PanelModificar extends JPanel{
 	private JTextField tDireccion;	
 	private JTextField tAnioIngreso;
 	private JTextField tNumVentas;
+	private JTextField tCliCaptados;
+	private JTextField tMontoCliente;
 	
 	private JComboBox<String> cbNivel;
 	private JComboBox<String> cbTipoPersonal;
