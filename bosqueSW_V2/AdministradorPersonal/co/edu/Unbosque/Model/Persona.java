@@ -217,7 +217,7 @@ public abstract class Persona {
 
 	@Override
 	public String toString() {
-		return "Persona: "			+ 
+		return ("Persona: "			+ 
 				"\nCedula: " 		+ getCedula() + 
 				"\nNombre: " 		+ getNombre() + 
 				"\nApellidos: " 	+ getApellidos()	+ 
@@ -225,7 +225,7 @@ public abstract class Persona {
 				"\nGenero: " 		+ getGenero() + 
 				"\nTelefono=" 		+ getTelefono() + 
 				"\nCorreo: " 		+ getCorreo() + 
-				"\nDireccion: " 	+ getDireccion();
+				"\nDireccion: " 	+ getDireccion());
 	}
 
 }

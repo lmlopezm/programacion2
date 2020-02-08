@@ -48,9 +48,6 @@ public class Controller implements ActionListener {
 			try {
 				entrada = new ObjectInputStream(new FileInputStream(archivo));
 				personas = (ArrayList<Persona>) entrada.readObject();
-				comisiones = (ArrayList<Concomision>) entrada.readObject();
-				juniors = (ArrayList<Ingjunior>) entrada.readObject();
-				seniors = (ArrayList<Ingsenior>) entrada.readObject();
 			} catch (ClassNotFoundException | IOException e) {
 				e.printStackTrace();
 			}
@@ -68,8 +65,7 @@ public class Controller implements ActionListener {
 	public void escribirEnArchivo() {
 		try {
 			salida = new ObjectOutputStream(new FileOutputStream(archivo));
-			// salida.writeObject(personas);
-			salida.writeObject(juniors.toString());
+			salida.writeObject(personas);
 			salida.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -160,15 +156,21 @@ public class Controller implements ActionListener {
 				 *                    direccion!=null
 				 * @param nivel       es el nivel del usuario. nivel!="", nivel!=null
 				 */
-				juniors.add(new Ingjunior(	cedula, 
-											IG.getPanAgregar().gettNombre().getText(),
-											IG.getPanAgregar().gettApellido().getText(),
-											Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
-											IG.getPanAgregar().gettGenero().getText(), 
-											IG.getPanAgregar().gettTel().getText(),
-											IG.getPanAgregar().gettCorreo().getText(), 
-											IG.getPanAgregar().gettDireccion().getText(), 
-											niv));
+				//personas.add(e)
+				
+				Ingjunior ij = new Ingjunior(	cedula, 
+						IG.getPanAgregar().gettNombre().getText(),
+						IG.getPanAgregar().gettApellido().getText(),
+						Integer.parseInt(IG.getPanAgregar().gettAnioIngreso().getText()),
+						IG.getPanAgregar().gettGenero().getText(), 
+						IG.getPanAgregar().gettTel().getText(),
+						IG.getPanAgregar().gettCorreo().getText(), 
+						IG.getPanAgregar().gettDireccion().getText(), 
+						niv);
+				
+				personas.add(ij);
+						
+				juniors.add(ij);
 			}
 			if (IG.getPanAgregar().getCbTipoPersonal().getSelectedItem().equals("Ingeniero Senior")) {
 				seniors.add(new Ingsenior(	cedula, 
