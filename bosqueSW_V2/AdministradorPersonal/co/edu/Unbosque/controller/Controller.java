@@ -86,7 +86,7 @@ public class Controller implements ActionListener {
 		if (!personas.isEmpty()) {
 			System.out.println(personas);
 			for (int i = 0; i < personas.size(); i++) {
-				if (personas.get(i).getTelefono().equals(cedula)) {
+				if (personas.get(i).getCedula().equals(cedula)) {
 					encontrado = personas.get(i);
 					JOptionPane.showMessageDialog(null, "Ingeniero: " + encontrado);
 				}
